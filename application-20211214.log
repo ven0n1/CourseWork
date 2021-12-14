@@ -1,0 +1,582 @@
+2021-12-14 19:51:41.410 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[java.io.FileNotFoundException: C:\Users\ven0n\IdeaProjects\CourseWork\.\xml\custom note.xml (Системе не удается найти указанный путь)]
+2021-12-14 19:51:41.427 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.JAXBException
+ - with linked exception:
+[java.io.FileNotFoundException: .\xml\custom note.xml (Системе не удается найти указанный путь)]
+2021-12-14 19:51:42.581 [main] INFO  org.example.AppTest - false
+2021-12-14 19:51:42.592 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[java.io.FileNotFoundException: C:\Users\ven0n\IdeaProjects\CourseWork\.\xml\structured note.xml (Системе не удается найти указанный путь)]
+2021-12-14 19:51:42.596 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.JAXBException
+ - with linked exception:
+[java.io.FileNotFoundException: .\xml\structured note.xml (Системе не удается найти указанный путь)]
+2021-12-14 19:51:42.612 [main] INFO  org.example.AppTest - false
+2021-12-14 19:51:42.628 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[java.io.FileNotFoundException: C:\Users\ven0n\IdeaProjects\CourseWork\.\xml\custom medicine.xml (Системе не удается найти указанный путь)]
+2021-12-14 19:51:42.632 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.JAXBException
+ - with linked exception:
+[java.io.FileNotFoundException: .\xml\custom medicine.xml (Системе не удается найти указанный путь)]
+2021-12-14 19:51:42.645 [main] INFO  org.example.AppTest - false
+2021-12-14 19:51:42.657 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[java.io.FileNotFoundException: C:\Users\ven0n\IdeaProjects\CourseWork\.\xml\structured medicine.xml (Системе не удается найти указанный путь)]
+2021-12-14 19:51:42.661 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.JAXBException
+ - with linked exception:
+[java.io.FileNotFoundException: .\xml\structured medicine.xml (Системе не удается найти указанный путь)]
+2021-12-14 19:51:42.674 [main] INFO  org.example.AppTest - false
+2021-12-14 20:00:24.058 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:00:24.238 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:00:24.255 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:00:24.267 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[java.io.FileNotFoundException: C:\Users\ven0n\IdeaProjects\CourseWork\.\xml\custom note.xml (Системе не удается найти указанный путь)]
+2021-12-14 20:00:24.268 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:00:24.268 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:00:24.269 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:00:24.269 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:00:24.269 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:00:24.269 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:00:24.276 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:00:24.296 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:00:24.297 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:00:24.299 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:00:24.302 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:00:24.303 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.JAXBException
+ - with linked exception:
+[java.io.FileNotFoundException: .\xml\custom note.xml (Системе не удается найти указанный путь)]
+2021-12-14 20:00:24.304 [main] INFO  org.example.AppTest - false
+2021-12-14 20:00:24.306 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:00:24.314 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:00:24.315 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:00:24.316 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[java.io.FileNotFoundException: C:\Users\ven0n\IdeaProjects\CourseWork\.\xml\structured note.xml (Системе не удается найти указанный путь)]
+2021-12-14 20:00:24.317 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:00:24.317 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:00:24.317 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:00:24.317 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:00:24.318 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:00:24.318 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:00:24.325 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:00:24.325 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:00:24.326 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:00:24.326 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:00:24.326 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:00:24.326 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.JAXBException
+ - with linked exception:
+[java.io.FileNotFoundException: .\xml\structured note.xml (Системе не удается найти указанный путь)]
+2021-12-14 20:00:24.327 [main] INFO  org.example.AppTest - false
+2021-12-14 20:00:24.328 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:00:24.333 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:00:24.334 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:00:24.335 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[java.io.FileNotFoundException: C:\Users\ven0n\IdeaProjects\CourseWork\.\xml\custom medicine.xml (Системе не удается найти указанный путь)]
+2021-12-14 20:00:24.335 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:00:24.335 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:00:24.336 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:00:24.336 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:00:24.336 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:00:24.336 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:00:24.341 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:00:24.341 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:00:24.341 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:00:24.341 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:00:24.342 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:00:24.342 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.JAXBException
+ - with linked exception:
+[java.io.FileNotFoundException: .\xml\custom medicine.xml (Системе не удается найти указанный путь)]
+2021-12-14 20:00:24.343 [main] INFO  org.example.AppTest - false
+2021-12-14 20:00:24.365 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:00:24.387 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:00:24.388 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:00:24.393 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[java.io.FileNotFoundException: C:\Users\ven0n\IdeaProjects\CourseWork\.\xml\structured medicine.xml (Системе не удается найти указанный путь)]
+2021-12-14 20:00:24.394 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:00:24.395 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:00:24.395 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:00:24.395 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:00:24.395 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:00:24.396 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:00:24.403 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:00:24.403 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:00:24.403 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:00:24.403 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:00:24.403 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:00:24.404 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.JAXBException
+ - with linked exception:
+[java.io.FileNotFoundException: .\xml\structured medicine.xml (Системе не удается найти указанный путь)]
+2021-12-14 20:00:24.404 [main] INFO  org.example.AppTest - false
+2021-12-14 20:06:02.735 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:06:02.888 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:06:02.898 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:06:43.497 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[java.io.FileNotFoundException: C:\Users\ven0n\IdeaProjects\CourseWork\.\xml\custom note.xml (Системе не удается найти указанный путь)]
+2021-12-14 20:06:47.432 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:06:47.432 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:06:47.433 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:06:47.434 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:06:47.434 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:06:47.435 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:06:47.455 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:06:47.503 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:06:47.503 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:06:47.504 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:06:47.506 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:07:46.020 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.JAXBException
+ - with linked exception:
+[java.io.FileNotFoundException: .\xml\custom note.xml (Системе не удается найти указанный путь)]
+2021-12-14 20:07:46.022 [main] INFO  org.example.AppTest - false
+2021-12-14 20:07:46.023 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:07:46.027 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:07:46.028 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:07:46.037 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[java.io.FileNotFoundException: C:\Users\ven0n\IdeaProjects\CourseWork\.\xml\structured note.xml (Системе не удается найти указанный путь)]
+2021-12-14 20:07:46.038 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:07:46.038 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:07:46.038 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:07:46.039 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:07:46.039 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:07:46.039 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:07:46.044 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:07:46.044 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:07:46.044 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:07:46.044 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:07:46.044 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:07:46.045 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.JAXBException
+ - with linked exception:
+[java.io.FileNotFoundException: .\xml\structured note.xml (Системе не удается найти указанный путь)]
+2021-12-14 20:07:46.045 [main] INFO  org.example.AppTest - false
+2021-12-14 20:07:46.047 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:07:46.052 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:07:46.053 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:07:46.055 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[java.io.FileNotFoundException: C:\Users\ven0n\IdeaProjects\CourseWork\.\xml\custom medicine.xml (Системе не удается найти указанный путь)]
+2021-12-14 20:07:46.056 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:07:46.056 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:07:46.056 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:07:46.056 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:07:46.057 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:07:46.057 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:07:46.061 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:07:46.062 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:07:46.062 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:07:46.063 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:07:46.064 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:07:46.065 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.JAXBException
+ - with linked exception:
+[java.io.FileNotFoundException: .\xml\custom medicine.xml (Системе не удается найти указанный путь)]
+2021-12-14 20:07:46.066 [main] INFO  org.example.AppTest - false
+2021-12-14 20:07:46.068 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:07:46.073 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:07:46.073 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:07:46.074 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[java.io.FileNotFoundException: C:\Users\ven0n\IdeaProjects\CourseWork\.\xml\structured medicine.xml (Системе не удается найти указанный путь)]
+2021-12-14 20:07:46.074 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:07:46.074 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:07:46.075 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:07:46.075 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:07:46.075 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:07:46.075 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:07:46.082 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:07:46.083 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:07:46.083 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:07:46.084 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:07:46.086 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:07:46.092 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.JAXBException
+ - with linked exception:
+[java.io.FileNotFoundException: .\xml\structured medicine.xml (Системе не удается найти указанный путь)]
+2021-12-14 20:07:46.092 [main] INFO  org.example.AppTest - false
+2021-12-14 20:11:31.044 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-12-14 20:11:31.047 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:11:31.182 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:11:31.191 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:11:31.327 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./xml/custom%20note.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-14 20:11:31.328 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:11:31.328 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:11:31.328 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:11:31.328 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:11:31.328 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:11:31.328 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:11:31.333 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:11:31.344 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:11:31.345 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:11:31.345 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:11:31.345 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:11:31.361 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.MarshalException
+ - with linked exception:
+[com.sun.istack.SAXException2: unable to marshal type "org.example.entity.CustomNote" as an element because it is missing an @XmlRootElement annotation]
+2021-12-14 20:11:31.362 [main] INFO  org.example.AppTest - false
+2021-12-14 20:11:31.372 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-12-14 20:11:31.373 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:11:31.377 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:11:31.377 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:11:31.379 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./xml/structured%20note.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-14 20:11:31.379 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:11:31.379 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:11:31.379 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:11:31.379 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:11:31.379 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:11:31.380 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:11:31.384 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:11:31.384 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:11:31.384 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:11:31.384 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:11:31.385 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:11:31.385 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.MarshalException
+ - with linked exception:
+[com.sun.istack.SAXException2: unable to marshal type "org.example.entity.StructuredNote" as an element because it is missing an @XmlRootElement annotation]
+2021-12-14 20:11:31.385 [main] INFO  org.example.AppTest - false
+2021-12-14 20:11:31.387 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-12-14 20:11:31.387 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:11:31.392 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:11:31.392 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:11:31.394 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./xml/custom%20medicine.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-14 20:11:31.395 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:11:31.395 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:11:31.395 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:11:31.395 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:11:31.395 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:11:31.395 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:11:31.399 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:11:31.399 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:11:31.399 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:11:31.400 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:11:31.400 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:11:31.400 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.MarshalException
+ - with linked exception:
+[com.sun.istack.SAXException2: unable to marshal type "org.example.entity.CustomMedicine" as an element because it is missing an @XmlRootElement annotation]
+2021-12-14 20:11:31.400 [main] INFO  org.example.AppTest - false
+2021-12-14 20:11:31.402 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-12-14 20:11:31.402 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:11:31.406 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:11:31.407 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:11:31.408 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./xml/structured%20medicine.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-14 20:11:31.408 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:11:31.408 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:11:31.408 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:11:31.408 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:11:31.409 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:11:31.409 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:11:31.413 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:11:31.413 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:11:31.413 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:11:31.413 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:11:31.413 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:11:31.414 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.MarshalException
+ - with linked exception:
+[com.sun.istack.SAXException2: unable to marshal type "org.example.entity.StructuredMedicine" as an element because it is missing an @XmlRootElement annotation]
+2021-12-14 20:11:31.414 [main] INFO  org.example.AppTest - false
+2021-12-14 20:13:36.390 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:13:36.566 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:13:36.574 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:13:36.592 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./xml/custom%20note.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-14 20:13:36.593 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:13:36.593 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:13:36.593 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:13:36.593 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:13:36.594 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:13:36.594 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:13:36.599 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:13:36.613 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:13:36.613 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:13:36.615 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:13:36.616 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:13:36.644 [main] INFO  org.example.AppTest - true
+2021-12-14 20:13:36.652 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:13:36.665 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:13:36.666 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:13:36.688 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./xml/structured%20note.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-14 20:13:36.688 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:13:36.689 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:13:36.690 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:13:36.694 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:13:36.694 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:13:36.694 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:13:36.702 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:13:36.702 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:13:36.703 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:13:36.703 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:13:36.704 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:13:36.706 [main] INFO  org.example.AppTest - true
+2021-12-14 20:13:36.738 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:13:36.743 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:13:36.745 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:13:36.747 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./xml/custom%20medicine.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-14 20:13:36.748 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:13:36.748 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:13:36.750 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:13:36.750 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:13:36.751 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:13:36.751 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:13:36.755 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:13:36.755 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:13:36.756 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:13:36.756 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:13:36.756 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:13:36.757 [main] INFO  org.example.AppTest - true
+2021-12-14 20:13:36.765 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:13:36.769 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:13:36.769 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:13:36.770 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./xml/structured%20medicine.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-14 20:13:36.771 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:13:36.771 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:13:36.771 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:13:36.771 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:13:36.771 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:13:36.771 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:13:36.775 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:13:36.775 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:13:36.775 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:13:36.776 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:13:36.776 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:13:36.777 [main] INFO  org.example.AppTest - true
+2021-12-14 20:14:15.818 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:14:16.012 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:14:16.024 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:14:16.059 [main] INFO  org.example.dataprovider.DataProviderCsv - read 4
+2021-12-14 20:14:16.059 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:14:16.069 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:14:16.070 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:14:16.073 [main] INFO  org.example.dataprovider.DataProviderCsv - read 4
+2021-12-14 20:14:16.073 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:14:16.073 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:14:16.073 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:14:16.073 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:14:16.074 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:14:16.074 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:14:16.074 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:14:16.074 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:14:16.087 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:14:16.102 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:14:16.102 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:14:16.103 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:14:16.103 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:14:16.115 [main] INFO  org.example.AppTest - true
+2021-12-14 20:14:16.119 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:14:16.129 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:14:16.134 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:14:16.143 [main] INFO  org.example.dataprovider.DataProviderCsv - read 4
+2021-12-14 20:14:16.143 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:14:16.151 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:14:16.152 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:14:16.154 [main] INFO  org.example.dataprovider.DataProviderCsv - read 4
+2021-12-14 20:14:16.154 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:14:16.155 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:14:16.155 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:14:16.155 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:14:16.156 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:14:16.157 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:14:16.157 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:14:16.157 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:14:16.165 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:14:16.166 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:14:16.166 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:14:16.167 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:14:16.167 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:14:16.168 [main] INFO  org.example.AppTest - true
+2021-12-14 20:14:16.172 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:14:16.175 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:14:16.176 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:14:16.186 [main] INFO  org.example.dataprovider.DataProviderCsv - read 4
+2021-12-14 20:14:16.186 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:14:16.190 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:14:16.190 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:14:16.192 [main] INFO  org.example.dataprovider.DataProviderCsv - read 4
+2021-12-14 20:14:16.192 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:14:16.192 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:14:16.192 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:14:16.192 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:14:16.192 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:14:16.192 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:14:16.193 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:14:16.193 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:14:16.196 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:14:16.197 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:14:16.198 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:14:16.198 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:14:16.198 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:14:16.199 [main] INFO  org.example.AppTest - true
+2021-12-14 20:14:16.200 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:14:16.204 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:14:16.204 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:14:16.211 [main] INFO  org.example.dataprovider.DataProviderCsv - read 4
+2021-12-14 20:14:16.211 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:14:16.216 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:14:16.216 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:14:16.218 [main] INFO  org.example.dataprovider.DataProviderCsv - read 4
+2021-12-14 20:14:16.218 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:14:16.218 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:14:16.218 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:14:16.218 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:14:16.218 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:14:16.218 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:14:16.219 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:14:16.219 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:14:16.222 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:14:16.222 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:14:16.222 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:14:16.223 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:14:16.223 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:14:16.223 [main] INFO  org.example.AppTest - true
+2021-12-14 20:16:31.643 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:16:31.780 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:16:31.790 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:16:31.804 [main] INFO  org.example.dataprovider.DataProviderCsv - read 4
+2021-12-14 20:16:31.805 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:16:31.808 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:16:31.809 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:16:31.811 [main] INFO  org.example.dataprovider.DataProviderCsv - read 4
+2021-12-14 20:16:31.811 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:16:31.811 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:16:31.811 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:16:31.812 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:16:31.812 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:16:31.812 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:16:31.813 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:16:31.813 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:16:31.813 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:16:31.813 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:16:31.819 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:16:31.828 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:16:31.828 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:16:31.829 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:16:31.829 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:16:31.834 [main] INFO  org.example.AppTest - true
+2021-12-14 20:16:31.836 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:16:31.842 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:16:31.842 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:16:31.870 [main] INFO  org.example.dataprovider.DataProviderCsv - read 4
+2021-12-14 20:16:31.873 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:16:31.900 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:16:31.905 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:16:31.918 [main] INFO  org.example.dataprovider.DataProviderCsv - read 4
+2021-12-14 20:16:31.928 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:16:31.928 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:16:31.929 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:16:31.929 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:16:31.929 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:16:31.930 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:16:31.930 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:16:31.934 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:16:31.934 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:16:31.934 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:16:31.943 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:16:31.943 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:16:31.944 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:16:31.944 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:16:31.944 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:16:31.950 [main] INFO  org.example.AppTest - true
+2021-12-14 20:16:31.953 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:16:31.957 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:16:31.958 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:16:31.964 [main] INFO  org.example.dataprovider.DataProviderCsv - read 4
+2021-12-14 20:16:31.966 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:16:31.970 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:16:31.971 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:16:31.973 [main] INFO  org.example.dataprovider.DataProviderCsv - read 4
+2021-12-14 20:16:31.973 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:16:31.973 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:16:31.973 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:16:31.974 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:16:31.974 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:16:31.974 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:16:31.974 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:16:31.974 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:16:31.975 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:16:31.975 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:16:31.978 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:16:31.978 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:16:31.978 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:16:31.978 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:16:31.978 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:16:31.979 [main] INFO  org.example.AppTest - true
+2021-12-14 20:16:31.981 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:16:31.987 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:16:31.987 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:16:31.994 [main] INFO  org.example.dataprovider.DataProviderCsv - read 4
+2021-12-14 20:16:31.994 [main] INFO  org.example.dataprovider.DataProviderCsv - read 1
+2021-12-14 20:16:31.998 [main] INFO  org.example.dataprovider.DataProviderCsv - read 2
+2021-12-14 20:16:31.999 [main] INFO  org.example.dataprovider.DataProviderCsv - read 3
+2021-12-14 20:16:32.001 [main] INFO  org.example.dataprovider.DataProviderCsv - read 4
+2021-12-14 20:16:32.001 [main] INFO  org.example.dataprovider.DataProviderCsv - save 1
+2021-12-14 20:16:32.002 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 1
+2021-12-14 20:16:32.002 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 2
+2021-12-14 20:16:32.003 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 3
+2021-12-14 20:16:32.003 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:16:32.004 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:16:32.005 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:16:32.005 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:16:32.005 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 4
+2021-12-14 20:16:32.005 [main] INFO  org.example.dataprovider.DataProviderCsv - findTypes 5
+2021-12-14 20:16:32.009 [main] INFO  org.example.dataprovider.DataProviderCsv - save 2
+2021-12-14 20:16:32.009 [main] INFO  org.example.dataprovider.DataProviderCsv - save 3
+2021-12-14 20:16:32.009 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 1
+2021-12-14 20:16:32.010 [main] INFO  org.example.dataprovider.DataProviderCsv - createCollectionElement 2
+2021-12-14 20:16:32.010 [main] INFO  org.example.dataprovider.DataProviderCsv - save 4
+2021-12-14 20:16:32.013 [main] INFO  org.example.AppTest - true
+2021-12-14 20:24:47.215 [main] INFO  org.example.AppTest - true
+2021-12-14 20:24:47.295 [main] INFO  org.example.AppTest - true
+2021-12-14 20:24:47.328 [main] INFO  org.example.AppTest - true
+2021-12-14 20:24:47.373 [main] INFO  org.example.AppTest - true
+2021-12-14 20:26:32.228 [main] INFO  org.example.AppTest - true
+2021-12-14 20:26:32.277 [main] INFO  org.example.AppTest - true
+2021-12-14 20:28:43.116 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-12-14 20:28:43.301 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./xml/custom%20note.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-14 20:29:29.059 [main] INFO  org.example.AppTest - true
+2021-12-14 20:29:29.062 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-12-14 20:29:29.093 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./xml/structured%20note.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-14 20:29:34.368 [main] INFO  org.example.AppTest - true
+2021-12-14 20:29:35.564 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-12-14 20:29:35.590 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./xml/custom%20medicine.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-14 20:29:36.736 [main] INFO  org.example.AppTest - true
+2021-12-14 20:29:36.739 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-12-14 20:29:36.772 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./xml/structured%20medicine.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-14 20:29:38.233 [main] INFO  org.example.AppTest - true
+2021-12-14 20:32:31.540 [main] INFO  org.example.AppTest - true
+2021-12-14 20:32:31.575 [main] INFO  org.example.AppTest - true
+2021-12-14 20:32:31.606 [main] INFO  org.example.AppTest - true
+2021-12-14 20:32:31.639 [main] INFO  org.example.AppTest - true
+2021-12-14 20:33:05.618 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-12-14 20:33:05.621 [main] INFO  org.example.dataprovider.DataProviderCsv - File empty
+2021-12-14 20:33:06.038 [main] INFO  org.example.AppTest - true
+2021-12-14 20:33:06.039 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-12-14 20:33:06.039 [main] INFO  org.example.dataprovider.DataProviderCsv - File empty
+2021-12-14 20:33:06.066 [main] INFO  org.example.AppTest - true
+2021-12-14 20:33:06.068 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-12-14 20:33:06.068 [main] INFO  org.example.dataprovider.DataProviderCsv - File empty
+2021-12-14 20:33:06.085 [main] INFO  org.example.AppTest - true
+2021-12-14 20:33:06.086 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-12-14 20:33:06.087 [main] INFO  org.example.dataprovider.DataProviderCsv - File empty
+2021-12-14 20:33:06.108 [main] INFO  org.example.AppTest - true

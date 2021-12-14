@@ -2,38 +2,44 @@ package org.example.entity;
 
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.UUID;
 
 public class User {
-    Medicine medicine;
-    ArrayList<Note> noteArrayList;
+    UUID id;
+    UUID medicineId;
+    ArrayList<UUID> noteIds;
 
-    public User(Medicine medicine, ArrayList<Note> noteArrayList) {
-        this.medicine = medicine;
-        this.noteArrayList = noteArrayList;
+    public User() {
     }
 
-    public Medicine getMedicine() {
-        return medicine;
+    public User(UUID id, UUID medicineId, ArrayList<UUID> noteIds) {
+        this.id = id;
+        this.medicineId = medicineId;
+        this.noteIds = noteIds;
     }
 
-    public void setMedicine(Medicine medicine) {
-        this.medicine = medicine;
+    public UUID getId() {
+        return id;
     }
 
-    public ArrayList<Note> getNoteArrayList() {
-        return noteArrayList;
+    public void setId(UUID id) {
+        this.id = id;
     }
 
-    public void setNoteArrayList(ArrayList<Note> noteArrayList) {
-        this.noteArrayList = noteArrayList;
+    public UUID getMedicineId() {
+        return medicineId;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "medicine=" + medicine +
-                ", noteArrayList=" + noteArrayList +
-                '}';
+    public void setMedicineId(UUID medicineId) {
+        this.medicineId = medicineId;
+    }
+
+    public ArrayList<UUID> getNoteIds() {
+        return noteIds;
+    }
+
+    public void setNoteIds(ArrayList<UUID> noteIds) {
+        this.noteIds = noteIds;
     }
 
     @Override
@@ -41,11 +47,20 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(medicine, user.medicine) && Objects.equals(noteArrayList, user.noteArrayList);
+        return Objects.equals(id, user.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(medicine, noteArrayList);
+        return Objects.hash(id);
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", medicineId=" + medicineId +
+                ", noteIds=" + noteIds +
+                '}';
     }
 }

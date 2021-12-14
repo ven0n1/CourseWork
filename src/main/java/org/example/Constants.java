@@ -7,12 +7,20 @@ public class Constants {
     public static final String CSV_CUSTOM_MEDICINE = "./csv/custom medicine.csv";
     public static final String CSV_STRUCTURED_MEDICINE = "./csv/structured medicine.csv";
 
+    public static final String XML_CUSTOM_NOTE = "./xml/custom note.xml";
+    public static final String XML_STRUCTURED_NOTE = "./xml/structured note.xml";
+    public static final String XML_CUSTOM_MEDICINE = "./xml/custom medicine.xml";
+    public static final String XML_STRUCTURED_MEDICINE = "./xml/structured medicine.xml";
+    public static final String XML_NOTES = "Notes";
+    public static final String XML_MEDICINES = "Medicines";
+
     public static final String DEFAULT = "default";
     public static final String ACTOR = "System";
     public static final String DATABASE_NAME = "Yaminov";
     public static final String COLLECTION_NAME = "historyContent";
     public static final String MONGO_CLIENT = "mongodb://localhost:27017";
     public static final String MONGO_DATE_PATTERN = "yyyy.MM.dd HH:mm:ss";
+    public static final String ID = "id";
 
     public static final String NOTE_HEART_RATE = "heartRate";
     public static final String NOTE_BLOOD_PRESSURE = "bloodPressure";

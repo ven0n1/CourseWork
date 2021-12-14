@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.dataprovider.DataProviderCsv;
+import org.example.dataprovider.DataProviderXml;
 import org.example.dataprovider.IDataProvider;
 import org.example.entity.Note;
 import org.junit.Test;
@@ -18,18 +19,9 @@ import java.util.Date;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-{
+public class AppTest {
     private static final Logger logger = LogManager.getLogger(AppTest.class);
     IDataProvider dataProvider = new DataProviderCsv();
-    /**
-     * Rigorous Test :-)
-     */
-    @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
-    }
 
     @Test
     public void a(){

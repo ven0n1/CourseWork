@@ -3,9 +3,13 @@ package org.example.entity;
 import com.opencsv.bean.CsvBindByName;
 import org.example.Constants;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Objects;
-
+import java.util.UUID;
+@XmlRootElement
 public class Medicine {
+    @CsvBindByName(column = Constants.ID)
+    UUID id;
     @CsvBindByName(column = Constants.MEDICINE_NAME)
     String name;
     @CsvBindByName(column = Constants.MEDICINE_FORM)
@@ -14,6 +18,7 @@ public class Medicine {
     String date;
 
     public Medicine(String name, String form, String date) {
+        this.id = UUID.randomUUID();
         this.name = name;
         this.form = form;
         this.date = date;
@@ -47,6 +52,19 @@ public class Medicine {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Medicine medicine = (Medicine) o;
+        return Objects.equals(id, medicine.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    @Override
     public String toString() {
         return "Medicine{" +
                 "name='" + name + '\'' +
@@ -55,16 +73,4 @@ public class Medicine {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Medicine medicine = (Medicine) o;
-        return Objects.equals(name, medicine.name) && Objects.equals(form, medicine.form) && Objects.equals(date, medicine.date);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, form, date);
-    }
 }

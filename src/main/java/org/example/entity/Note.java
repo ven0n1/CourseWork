@@ -3,9 +3,13 @@ package org.example.entity;
 import com.opencsv.bean.CsvBindByName;
 import org.example.Constants;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Objects;
-
+import java.util.UUID;
+@XmlRootElement
 public class Note {
+    @CsvBindByName(column = Constants.ID)
+    UUID id;
     @CsvBindByName(column = Constants.NOTE_HEART_RATE)
     int heartRate;
     @CsvBindByName(column = Constants.NOTE_BLOOD_PRESSURE)
@@ -19,6 +23,7 @@ public class Note {
     MedicationTime medicationTime;
 
     public Note(int heartRate, String bloodPressure, MedicationTime medicationTime) {
+        this.id = UUID.randomUUID();
         this.heartRate = heartRate;
         this.bloodPressure = bloodPressure;
         this.medicationTime = medicationTime;

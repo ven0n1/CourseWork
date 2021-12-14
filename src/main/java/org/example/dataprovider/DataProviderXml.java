@@ -1,27 +1,26 @@
 package org.example.dataprovider;
 
 import com.google.gson.Gson;
-import com.opencsv.CSVWriter;
-import com.opencsv.bean.CsvToBeanBuilder;
-import com.opencsv.bean.StatefulBeanToCsv;
-import com.opencsv.bean.StatefulBeanToCsvBuilder;
-import com.opencsv.exceptions.CsvDataTypeMismatchException;
-import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.Constants;
 import org.example.HistoryContent;
 import org.example.entity.*;
+import org.example.util.JAXBCollection;
 
-import java.io.*;
+import javax.xml.bind.*;
+import javax.xml.namespace.QName;
+import javax.xml.transform.stream.StreamSource;
+import java.io.File;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class DataProviderCsv implements IDataProvider{
+public class DataProviderXml implements IDataProvider{
     private static final Logger logger = LogManager.getLogger(DataProviderCsv.class);
 
-    public DataProviderCsv() {
+    public DataProviderXml() {
     }
 
 
@@ -44,12 +43,12 @@ public class DataProviderCsv implements IDataProvider{
     public boolean specifyAdditionalParameters(Note note, String description) {
         boolean isCreated;
         CustomNote customNote = new CustomNote(note.getHeartRate(), note.getBloodPressure(), note.getMedicationTime(), description);
-        List<Object> list = new ArrayList<>();
-        if(read(CustomNote.class, Constants.CSV_CUSTOM_NOTE).isPresent()){
-            list = read(CustomNote.class, Constants.CSV_CUSTOM_NOTE).get();
+        List<CustomNote> list = new ArrayList<>();
+        if(read(CustomNote.class, Constants.XML_CUSTOM_NOTE).isPresent()){
+            list = read(CustomNote.class, Constants.XML_CUSTOM_NOTE).get();
         }
         list.add(customNote);
-        isCreated = save(list, Constants.CSV_CUSTOM_NOTE);
+        isCreated = save(Constants.XML_NOTES, list, Constants.XML_CUSTOM_NOTE);
         IDataProvider.saveHistory(getClass().getName(), HistoryContent.Status.SUCCESS, new Gson().toJson(customNote));
         return isCreated;
     }
@@ -59,12 +58,12 @@ public class DataProviderCsv implements IDataProvider{
         boolean isCreated;
         StructuredNote structuredNote = new StructuredNote(note.getHeartRate(), note.getBloodPressure(),
                 note.getMedicationTime(), dyspnea, sweating, dizziness, stateOfHealth);
-        List<Object> list = new ArrayList<>();
-        if(read(StructuredNote.class, Constants.CSV_STRUCTURED_NOTE).isPresent()){
-            list = read(StructuredNote.class, Constants.CSV_STRUCTURED_NOTE).get();
+        List<StructuredNote> list = new ArrayList<>();
+        if(read(StructuredNote.class, Constants.XML_STRUCTURED_NOTE).isPresent()){
+            list = read(StructuredNote.class, Constants.XML_STRUCTURED_NOTE).get();
         }
         list.add(structuredNote);
-        isCreated = save(list, Constants.CSV_STRUCTURED_NOTE);
+        isCreated = save(Constants.XML_NOTES, list, Constants.XML_STRUCTURED_NOTE);
         IDataProvider.saveHistory(getClass().getName(), HistoryContent.Status.SUCCESS, new Gson().toJson(structuredNote));
         return isCreated;
     }
@@ -97,12 +96,12 @@ public class DataProviderCsv implements IDataProvider{
     public boolean addDescription(Medicine medicine, String description) {
         boolean isCreated;
         CustomMedicine customMedicine = new CustomMedicine(medicine.getName(), medicine.getForm(), medicine.getDate(), description);
-        List<Object> list = new ArrayList<>();
-        if(read(CustomMedicine.class, Constants.CSV_CUSTOM_MEDICINE).isPresent()){
-            list = read(CustomMedicine.class, Constants.CSV_CUSTOM_MEDICINE).get();
+        List<CustomMedicine> list = new ArrayList<>();
+        if(read(CustomMedicine.class, Constants.XML_CUSTOM_MEDICINE).isPresent()){
+            list = read(CustomMedicine.class, Constants.XML_CUSTOM_MEDICINE).get();
         }
         list.add(customMedicine);
-        isCreated = save(list, Constants.CSV_CUSTOM_MEDICINE);
+        isCreated = save(Constants.XML_MEDICINES, list, Constants.XML_CUSTOM_MEDICINE);
         IDataProvider.saveHistory(getClass().getName(), HistoryContent.Status.SUCCESS, new Gson().toJson(customMedicine));
         return isCreated;
     }
@@ -112,35 +111,44 @@ public class DataProviderCsv implements IDataProvider{
         boolean isCreated;
         StructuredMedicine structuredMedicine = new StructuredMedicine(medicine.getName(), medicine.getForm(),
                 medicine.getDate(), uses, sideEffect, precautions, interaction, overdose);
-        List<Object> medicineList = new ArrayList<>();
-        if(read(StructuredMedicine.class, Constants.CSV_STRUCTURED_MEDICINE).isPresent()){
-            medicineList = read(StructuredMedicine.class, Constants.CSV_STRUCTURED_MEDICINE).get();
+        List<StructuredMedicine> medicineList = new ArrayList<>();
+        if(read(StructuredMedicine.class, Constants.XML_STRUCTURED_MEDICINE).isPresent()){
+            medicineList = read(StructuredMedicine.class, Constants.XML_STRUCTURED_MEDICINE).get();
         }
         medicineList.add(structuredMedicine);
-        isCreated = save(medicineList, Constants.CSV_STRUCTURED_MEDICINE);
+        isCreated = save(Constants.XML_MEDICINES, medicineList, Constants.XML_STRUCTURED_MEDICINE);
         IDataProvider.saveHistory(getClass().getName(), HistoryContent.Status.SUCCESS, new Gson().toJson(structuredMedicine));
         return isCreated;
     }
 
-    public <T> boolean save(List<T> list, String path){
-        boolean isSaved;
+    public String[] fillArguments(String[] parameters){
+        String[] strings = new String[5];
+        Arrays.fill(strings, Constants.DEFAULT);
+        System.arraycopy(parameters, 0, strings, 0, parameters.length);
+        return strings;
+    }
+
+
+    public static <T> boolean save(String rootName, Collection<T> collection, String path) {
+        boolean isSaved = false;
         try {
-            CSVWriter csvWriter = new CSVWriter(new FileWriter(path));
-            StatefulBeanToCsv<T> beanToCsv = new StatefulBeanToCsvBuilder<T>(csvWriter).build();
-            beanToCsv.write(list);
-            csvWriter.close();
+            // Create context with generic type
+            JAXBContext jaxbContext = JAXBContext.newInstance(findTypes(collection));
+            Marshaller marshaller = jaxbContext.createMarshaller();
+            // Create wrapper collection
+            JAXBElement collectionElement = createCollectionElement(rootName, collection);
+            marshaller.marshal(collectionElement, new File(path));
             isSaved = true;
-        } catch (IOException | CsvDataTypeMismatchException | CsvRequiredFieldEmptyException e) {
+        } catch (JAXBException e) {
             logger.error(e);
-            isSaved = false;
         }
         return isSaved;
     }
 
-    public <T> Optional<List<T>> read(Class<?> type, String path){
-        List<T> list;
+
+    public static <T> Optional<List<T>> read(Class<T> tClass, String path) {
+        Optional<List<T>> optional = Optional.empty();
         File file = new File(path);
-        Optional<List<T>> optionalList;
         file.getParentFile().mkdirs();
         try {
             if(file.createNewFile()){
@@ -149,27 +157,39 @@ public class DataProviderCsv implements IDataProvider{
         } catch (IOException e) {
             logger.error(e);
         }
-        if (file.length() != 0){
-            try {
-                list = new CsvToBeanBuilder<T>(new FileReader(path)).withType((Class<? extends T>) type).build().parse();
-                optionalList = Optional.of(list);
-            } catch (FileNotFoundException e) {
-                logger.error(e);
-                optionalList = Optional.empty();
-            }
-        } else{
-            logger.info(Constants.INFO_EMPTY_FILE);
-            optionalList = Optional.empty();
+        try {
+            JAXBContext jaxbContext = JAXBContext.newInstance(JAXBCollection.class, tClass);
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+            JAXBCollection<T> collection = unmarshaller.unmarshal(new StreamSource(new File(path)), JAXBCollection.class).getValue();
+            optional = Optional.of(collection.getItems());
+        } catch (JAXBException e) {
+            logger.error(e);
         }
-        return optionalList;
+        return optional;
     }
 
+    protected static <T> Class[] findTypes(Collection<T> collection) {
+        Set<Class> types = new HashSet<Class>();
+        types.add(JAXBCollection.class);
+        for (T object : collection) {
+            if (object != null) {
+                types.add(object.getClass());
+            }
+        }
+        return types.toArray(new Class[0]);
+    }
 
-    public String[] fillArguments(String[] parameters){
-        String[] strings = new String[5];
-        Arrays.fill(strings, Constants.DEFAULT);
-        System.arraycopy(parameters, 0, strings, 0, parameters.length);
-        return strings;
+    /**
+     * создает JAXBElement, который содержит JAXBCollection. Нужен для
+     * marshall для generic коллекции без отдельного класса-оболочки
+     *
+     * @param rootName Имя корневого элемента в Xml
+     * @param tCollection List для сохранения
+     * @return JAXBElement, содержащий нашу Collection, обернутую в JAXBCollection.
+     */
+    protected static <T> JAXBElement createCollectionElement(String rootName, Collection<T> tCollection) {
+        JAXBCollection collection = new JAXBCollection(tCollection);
+        return new JAXBElement<JAXBCollection>(new QName(rootName), JAXBCollection.class, collection);
     }
 
 }

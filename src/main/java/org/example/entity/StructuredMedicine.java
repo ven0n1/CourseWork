@@ -3,8 +3,9 @@ package org.example.entity;
 import com.opencsv.bean.CsvBindByName;
 import org.example.Constants;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Objects;
-
+@XmlRootElement
 public class StructuredMedicine extends Medicine{
     @CsvBindByName(column = Constants.MEDICINE_USES)
     String uses;
