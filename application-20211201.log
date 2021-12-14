@@ -1,0 +1,22 @@
+2021-12-01 14:42:32.150 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-12-01 14:42:32.154 [main] ERROR org.example.dataprovider.DataProviderCsv - File empty
+2021-12-01 14:42:32.331 [main] INFO  org.example.AppTest - true
+2021-12-01 14:42:32.409 [main] INFO  org.example.AppTest - true
+2021-12-01 14:42:32.432 [main] INFO  org.example.AppTest - true
+2021-12-01 14:42:32.460 [main] INFO  org.example.AppTest - true
+2021-12-01 14:46:11.555 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-12-01 14:46:11.558 [main] ERROR org.example.dataprovider.DataProviderCsv - File empty
+2021-12-01 14:46:11.657 [main] INFO  org.example.AppTest - true
+2021-12-01 14:46:11.659 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-12-01 14:46:11.659 [main] ERROR org.example.dataprovider.DataProviderCsv - File empty
+2021-12-01 14:46:11.672 [main] INFO  org.example.AppTest - true
+2021-12-01 14:46:11.674 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-12-01 14:46:11.675 [main] ERROR org.example.dataprovider.DataProviderCsv - File empty
+2021-12-01 14:46:11.689 [main] INFO  org.example.AppTest - true
+2021-12-01 14:46:11.690 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-12-01 14:46:11.691 [main] ERROR org.example.dataprovider.DataProviderCsv - File empty
+2021-12-01 14:46:11.702 [main] INFO  org.example.AppTest - true
+2021-12-01 14:47:44.311 [main] INFO  org.example.AppTest - true
+2021-12-01 14:47:44.340 [main] INFO  org.example.AppTest - true
+2021-12-01 14:47:44.361 [main] INFO  org.example.AppTest - true
+2021-12-01 14:47:44.395 [main] INFO  org.example.AppTest - true

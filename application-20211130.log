@@ -1,0 +1,35 @@
+2021-11-30 12:26:38.181 [main] ERROR org.example.dataprovider.DataProviderCsv - File empty or does not exists
+2021-11-30 12:26:38.181 [main] ERROR org.example.dataprovider.DataProviderCsv - java.io.FileNotFoundException: .\csv\custom note.csv (Системе не удается найти указанный путь)
+2021-11-30 12:26:38.181 [main] INFO  org.example.AppTest - false
+2021-11-30 12:32:20.463 [main] ERROR org.example.dataprovider.DataProviderCsv - java.io.IOException: Системе не удается найти указанный путь
+2021-11-30 12:32:20.463 [main] ERROR org.example.dataprovider.DataProviderCsv - File empty or does not exists
+2021-11-30 12:32:20.463 [main] ERROR org.example.dataprovider.DataProviderCsv - java.io.FileNotFoundException: .\csv\custom note.csv (Системе не удается найти указанный путь)
+2021-11-30 12:32:20.463 [main] INFO  org.example.AppTest - false
+2021-11-30 12:32:52.031 [main] ERROR org.example.dataprovider.DataProviderCsv - java.io.IOException: Системе не удается найти указанный путь
+2021-11-30 12:32:52.046 [main] ERROR org.example.dataprovider.DataProviderCsv - File empty or does not exists
+2021-11-30 12:32:52.046 [main] ERROR org.example.dataprovider.DataProviderCsv - java.io.FileNotFoundException: .\csv\custom note.csv (Системе не удается найти указанный путь)
+2021-11-30 12:32:52.046 [main] INFO  org.example.AppTest - false
+2021-11-30 12:36:50.727 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-11-30 12:36:50.743 [main] ERROR org.example.dataprovider.DataProviderCsv - File empty or does not exists
+2021-11-30 12:36:50.965 [main] INFO  org.example.AppTest - true
+2021-11-30 12:38:28.990 [main] INFO  org.example.AppTest - true
+2021-11-30 15:56:58.802 [main] INFO  org.example.AppTest - true
+2021-11-30 15:56:58.802 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-11-30 15:56:58.802 [main] ERROR org.example.dataprovider.DataProviderCsv - File empty
+2021-11-30 15:56:58.818 [main] INFO  org.example.AppTest - true
+2021-11-30 15:56:58.818 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-11-30 15:56:58.818 [main] ERROR org.example.dataprovider.DataProviderCsv - File empty
+2021-11-30 15:56:58.818 [main] INFO  org.example.AppTest - true
+2021-11-30 15:56:58.818 [main] INFO  org.example.dataprovider.DataProviderCsv - File is created
+2021-11-30 15:56:58.818 [main] ERROR org.example.dataprovider.DataProviderCsv - File empty
+2021-11-30 15:56:58.833 [main] INFO  org.example.AppTest - true
+2021-11-30 15:59:40.440 [main] INFO  org.example.AppTest - true
+2021-11-30 15:59:40.482 [main] INFO  org.example.AppTest - true
+2021-11-30 15:59:40.522 [main] INFO  org.example.AppTest - true
+2021-11-30 16:09:14.266 [main] INFO  org.example.AppTest - [Ljava.lang.String;@5965d37
+2021-11-30 16:09:37.212 [main] INFO  org.example.AppTest - [1, 2]
+2021-11-30 16:09:49.934 [main] INFO  org.example.AppTest - [1, 2, default, default, default]
+2021-11-30 16:11:26.047 [main] INFO  org.example.AppTest - true
+2021-11-30 16:11:26.094 [main] INFO  org.example.AppTest - true
+2021-11-30 16:11:26.129 [main] INFO  org.example.AppTest - true
+2021-11-30 16:11:26.174 [main] INFO  org.example.AppTest - true
