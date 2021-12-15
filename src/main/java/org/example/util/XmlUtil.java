@@ -26,11 +26,14 @@ public class XmlUtil {
     public static <T> boolean save(String rootName, Collection<T> collection, String path) {
         boolean isSaved = false;
         try {
-            // Create context with generic type
+            // создаем контекст с найденными классами
             JAXBContext jaxbContext = JAXBContext.newInstance(findTypes(collection));
             Marshaller marshaller = jaxbContext.createMarshaller();
-            // Create wrapper collection
+            // делает форматированный файл, чтоб всё не записывалось в одну строку
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            // создаем wrapper (оболочку) к нашему List
             JAXBElement collectionElement = createCollectionElement(rootName, collection);
+            // записываем в файл
             marshaller.marshal(collectionElement, new File(path));
             isSaved = true;
         } catch (JAXBException e) {
@@ -50,8 +53,10 @@ public class XmlUtil {
     public static <T> Optional<List<T>> read(Class<T> tClass, String path) {
         Optional<List<T>> optional = Optional.empty();
         File file = new File(path);
+        // создаем директории к файлу, если они не существуют
         file.getParentFile().mkdirs();
         try {
+            // создаем новый файл
             if(file.createNewFile()){
                 logger.info(Constants.INFO_CREATE_FILE);
             }
@@ -59,9 +64,12 @@ public class XmlUtil {
             logger.error(e);
         }
         try {
+            // создаем контекст с типом нашего класса
             JAXBContext jaxbContext = JAXBContext.newInstance(JAXBCollection.class, tClass);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+            // считываем в JAXBCollection
             JAXBCollection<T> collection = unmarshaller.unmarshal(new StreamSource(new File(path)), JAXBCollection.class).getValue();
+            // переводим JAXBCollection в List и оборачиваем в Optional
             optional = Optional.of(collection.getItems());
         } catch (JAXBException e) {
             logger.error(e);
@@ -76,7 +84,7 @@ public class XmlUtil {
      * @return все классы, найденные в коллекции. В том числе JAXBCollection
      */
     protected static <T> Class[] findTypes(Collection<T> collection) {
-        Set<Class> types = new HashSet<Class>();
+        Set<Class> types = new HashSet<>();
         types.add(JAXBCollection.class);
         for (T object : collection) {
             if (object != null) {

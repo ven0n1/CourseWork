@@ -63,7 +63,7 @@ public interface IDataProvider {
     /**
      * Добавление и преобразование срока годности
      * @param date количество месяцев до истечения срока годности
-     * @return String: приведение даты к виду: yyyy/MM/dd
+     * @return Строку с датой приведенной к виду: yyyy/MM/dd
      */
     String addDate(int date);
 

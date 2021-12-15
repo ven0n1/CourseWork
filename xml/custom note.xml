@@ -1,1 +1,39 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Notes><customNote><bloodPressure>120/80</bloodPressure><heartRate>60</heartRate><medicationTime>BEFORE</medicationTime><description>1</description></customNote><customNote><bloodPressure>120/80</bloodPressure><heartRate>60</heartRate><medicationTime>BEFORE</medicationTime><description>1</description></customNote><customNote><bloodPressure>120/80</bloodPressure><heartRate>60</heartRate><medicationTime>BEFORE</medicationTime><description>1</description></customNote><customNote><bloodPressure>120/80</bloodPressure><heartRate>60</heartRate><medicationTime>BEFORE</medicationTime><description>1</description></customNote></Notes>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Notes>
+    <customNote>
+        <bloodPressure>120/80</bloodPressure>
+        <heartRate>60</heartRate>
+        <medicationTime>BEFORE</medicationTime>
+        <description>1</description>
+    </customNote>
+    <customNote>
+        <bloodPressure>120/80</bloodPressure>
+        <heartRate>60</heartRate>
+        <medicationTime>BEFORE</medicationTime>
+        <description>1</description>
+    </customNote>
+    <customNote>
+        <bloodPressure>120/80</bloodPressure>
+        <heartRate>60</heartRate>
+        <medicationTime>BEFORE</medicationTime>
+        <description>1</description>
+    </customNote>
+    <customNote>
+        <bloodPressure>120/80</bloodPressure>
+        <heartRate>60</heartRate>
+        <medicationTime>BEFORE</medicationTime>
+        <description>1</description>
+    </customNote>
+    <customNote>
+        <bloodPressure>120/80</bloodPressure>
+        <heartRate>60</heartRate>
+        <medicationTime>BEFORE</medicationTime>
+        <description>1</description>
+    </customNote>
+    <customNote>
+        <bloodPressure>120/80</bloodPressure>
+        <heartRate>60</heartRate>
+        <medicationTime>BEFORE</medicationTime>
+        <description>1</description>
+    </customNote>
+</Notes>

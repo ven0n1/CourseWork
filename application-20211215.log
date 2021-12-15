@@ -50,3 +50,7 @@ javax.xml.bind.JAXBException: org.example.entity.JAXBCollection is not known to 
 2021-12-15 11:29:34.594 [main] INFO  org.example.AppTest - true
 2021-12-15 11:29:34.623 [main] INFO  org.example.AppTest - true
 2021-12-15 11:29:34.663 [main] INFO  org.example.AppTest - true
+2021-12-15 19:04:25.727 [main] INFO  org.example.AppTest - true
+2021-12-15 19:04:25.796 [main] INFO  org.example.AppTest - true
+2021-12-15 19:04:25.897 [main] INFO  org.example.AppTest - true
+2021-12-15 19:04:25.949 [main] INFO  org.example.AppTest - true
