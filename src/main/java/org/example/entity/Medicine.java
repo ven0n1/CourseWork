@@ -6,6 +6,13 @@ import org.example.Constants;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Objects;
 import java.util.UUID;
+
+/**
+ * Класс Medicine
+ * Родительский класс лекарств
+ * @see CustomMedicine
+ * @see StructuredMedicine
+ */
 @XmlRootElement
 public class Medicine {
     @CsvBindByName(column = Constants.ID)

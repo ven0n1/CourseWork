@@ -1,5 +1,10 @@
-package org.example;
+package org.example.entity;
 
+import org.example.Constants;
+
+/**
+ * Класс для сохранения истории об изменении объекта в Mongo
+ */
 public class HistoryContent {
     String className;
     String createdDate;
@@ -8,6 +13,13 @@ public class HistoryContent {
     Status status;
     String jsonEntity;
 
+    /**
+     * Конструктор для создания истории
+     * @param className имя класс, откуда был вызван объект
+     * @param createdDate дата изменения
+     * @param status статус изменения
+     * @param jsonEntity json представление объекта
+     */
     public HistoryContent(String className, String createdDate, Status status, String jsonEntity) {
         this.className = className;
         this.createdDate = createdDate;

@@ -10,13 +10,16 @@ import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.Constants;
-import org.example.HistoryContent;
+import org.example.entity.HistoryContent;
 import org.example.entity.*;
 
 import java.io.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
+
+import static org.example.util.CsvUtil.read;
+import static org.example.util.CsvUtil.save;
 
 public class DataProviderCsv implements IDataProvider{
     private static final Logger logger = LogManager.getLogger(DataProviderCsv.class);
@@ -108,10 +111,10 @@ public class DataProviderCsv implements IDataProvider{
     }
 
     @Override
-    public boolean addSections(Medicine medicine, String uses, String sideEffect, String precautions, String interaction, String overdose) {
+    public boolean addSections(Medicine medicine, String uses, String sideEffects, String precautions, String interaction, String overdose) {
         boolean isCreated;
         StructuredMedicine structuredMedicine = new StructuredMedicine(medicine.getName(), medicine.getForm(),
-                medicine.getDate(), uses, sideEffect, precautions, interaction, overdose);
+                medicine.getDate(), uses, sideEffects, precautions, interaction, overdose);
         List<Object> medicineList = new ArrayList<>();
         if(read(StructuredMedicine.class, Constants.CSV_STRUCTURED_MEDICINE).isPresent()){
             medicineList = read(StructuredMedicine.class, Constants.CSV_STRUCTURED_MEDICINE).get();
@@ -122,54 +125,10 @@ public class DataProviderCsv implements IDataProvider{
         return isCreated;
     }
 
-    public <T> boolean save(List<T> list, String path){
-        boolean isSaved;
-        try {
-            CSVWriter csvWriter = new CSVWriter(new FileWriter(path));
-            StatefulBeanToCsv<T> beanToCsv = new StatefulBeanToCsvBuilder<T>(csvWriter).build();
-            beanToCsv.write(list);
-            csvWriter.close();
-            isSaved = true;
-        } catch (IOException | CsvDataTypeMismatchException | CsvRequiredFieldEmptyException e) {
-            logger.error(e);
-            isSaved = false;
-        }
-        return isSaved;
-    }
-
-    public <T> Optional<List<T>> read(Class<?> type, String path){
-        List<T> list;
-        File file = new File(path);
-        Optional<List<T>> optionalList;
-        file.getParentFile().mkdirs();
-        try {
-            if(file.createNewFile()){
-                logger.info(Constants.INFO_CREATE_FILE);
-            }
-        } catch (IOException e) {
-            logger.error(e);
-        }
-        if (file.length() != 0){
-            try {
-                list = new CsvToBeanBuilder<T>(new FileReader(path)).withType((Class<? extends T>) type).build().parse();
-                optionalList = Optional.of(list);
-            } catch (FileNotFoundException e) {
-                logger.error(e);
-                optionalList = Optional.empty();
-            }
-        } else{
-            logger.info(Constants.INFO_EMPTY_FILE);
-            optionalList = Optional.empty();
-        }
-        return optionalList;
-    }
-
-
     public String[] fillArguments(String[] parameters){
         String[] strings = new String[5];
         Arrays.fill(strings, Constants.DEFAULT);
         System.arraycopy(parameters, 0, strings, 0, parameters.length);
         return strings;
     }
-
 }

@@ -1,10 +1,13 @@
-package org.example.util;
+package org.example.entity;
 
 import javax.xml.bind.annotation.XmlAnyElement;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * Обертка для Xml файлов
+ */
 public class JAXBCollection<T> {
     @XmlAnyElement(lax = true)
     private List<T> items;

@@ -6,6 +6,13 @@ import org.example.Constants;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Objects;
 import java.util.UUID;
+
+/**
+ * Класс Note
+ * Родительский класс заметок
+ * @see CustomNote
+ * @see StructuredNote
+ */
 @XmlRootElement
 public class Note {
     @CsvBindByName(column = Constants.ID)

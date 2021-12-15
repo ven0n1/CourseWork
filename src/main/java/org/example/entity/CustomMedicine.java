@@ -5,11 +5,24 @@ import org.example.Constants;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Objects;
+
+/**
+ * Класс CustomMedicine
+ * используется для создания информации о лекарстве
+ * с описанием, который напишет пользователь
+ */
 @XmlRootElement
 public class CustomMedicine extends Medicine{
     @CsvBindByName(column = Constants.DESCRIPTION)
      String description;
 
+    /**
+     * Конструктор для создания лекарства
+     * @param name - название лекарства
+     * @param form - лекарственная форма
+     * @param date - дата окончания срока годности
+     * @param description - описание лекарства
+     */
     public CustomMedicine(String name, String form, String date, String description) {
         super(name, form, date);
         this.description = description;
@@ -34,19 +47,5 @@ public class CustomMedicine extends Medicine{
                 ", date='" + date + '\'' +
                 ", description='" + description + '\'' +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        CustomMedicine that = (CustomMedicine) o;
-        return Objects.equals(description, that.description);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), description);
     }
 }

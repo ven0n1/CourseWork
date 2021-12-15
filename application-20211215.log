@@ -1,0 +1,52 @@
+2021-12-15 09:13:18.003 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.MarshalException
+ - with linked exception:
+[com.sun.istack.SAXException2: javax.xml.bind.JAXBException: org.example.entity.JAXBCollection is not known to this context
+javax.xml.bind.JAXBException: org.example.entity.JAXBCollection is not known to this context]
+2021-12-15 09:13:18.613 [main] INFO  org.example.AppTest - false
+2021-12-15 09:13:18.632 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.MarshalException
+ - with linked exception:
+[com.sun.istack.SAXException2: javax.xml.bind.JAXBException: org.example.entity.JAXBCollection is not known to this context
+javax.xml.bind.JAXBException: org.example.entity.JAXBCollection is not known to this context]
+2021-12-15 09:13:18.669 [main] INFO  org.example.AppTest - false
+2021-12-15 09:13:18.686 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.MarshalException
+ - with linked exception:
+[com.sun.istack.SAXException2: javax.xml.bind.JAXBException: org.example.entity.JAXBCollection is not known to this context
+javax.xml.bind.JAXBException: org.example.entity.JAXBCollection is not known to this context]
+2021-12-15 09:13:18.698 [main] INFO  org.example.AppTest - false
+2021-12-15 09:13:18.716 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.MarshalException
+ - with linked exception:
+[com.sun.istack.SAXException2: javax.xml.bind.JAXBException: org.example.entity.JAXBCollection is not known to this context
+javax.xml.bind.JAXBException: org.example.entity.JAXBCollection is not known to this context]
+2021-12-15 09:13:18.733 [main] INFO  org.example.AppTest - false
+2021-12-15 09:14:12.931 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./xml/custom%20note.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-15 09:14:13.241 [main] INFO  org.example.AppTest - true
+2021-12-15 09:14:13.248 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./xml/structured%20note.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-15 09:14:13.264 [main] INFO  org.example.AppTest - true
+2021-12-15 09:14:13.269 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./xml/custom%20medicine.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-15 09:14:13.284 [main] INFO  org.example.AppTest - true
+2021-12-15 09:14:13.289 [main] ERROR org.example.dataprovider.DataProviderCsv - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./xml/structured%20medicine.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-15 09:14:13.306 [main] INFO  org.example.AppTest - true
+2021-12-15 09:14:51.283 [main] INFO  org.example.AppTest - true
+2021-12-15 09:14:51.317 [main] INFO  org.example.AppTest - true
+2021-12-15 09:14:51.344 [main] INFO  org.example.AppTest - true
+2021-12-15 09:14:51.373 [main] INFO  org.example.AppTest - true
+2021-12-15 11:04:54.592 [main] INFO  org.example.AppTest - true
+2021-12-15 11:04:54.636 [main] INFO  org.example.AppTest - true
+2021-12-15 11:04:54.671 [main] INFO  org.example.AppTest - true
+2021-12-15 11:04:54.703 [main] INFO  org.example.AppTest - true
+2021-12-15 11:28:45.315 [main] INFO  org.example.AppTest - true
+2021-12-15 11:28:45.350 [main] INFO  org.example.AppTest - true
+2021-12-15 11:28:45.392 [main] INFO  org.example.AppTest - true
+2021-12-15 11:28:45.426 [main] INFO  org.example.AppTest - true
+2021-12-15 11:29:34.551 [main] INFO  org.example.AppTest - true
+2021-12-15 11:29:34.594 [main] INFO  org.example.AppTest - true
+2021-12-15 11:29:34.623 [main] INFO  org.example.AppTest - true
+2021-12-15 11:29:34.663 [main] INFO  org.example.AppTest - true

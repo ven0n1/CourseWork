@@ -5,6 +5,12 @@ import org.example.Constants;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Objects;
+
+/**
+ * Класс StructuredNote
+ * используется для создания заметок о приеме лекарства
+ * с структурированным описанием
+ */
 @XmlRootElement
 public class StructuredNote extends Note{
     @CsvBindByName(column = Constants.NOTE_DYSPNEA)
@@ -16,6 +22,16 @@ public class StructuredNote extends Note{
     @CsvBindByName(column = Constants.NOTE_STATE_OF_HEALTH)
     String stateOfHealth;
 
+    /**
+     * Конструктор для создания заметок о приеме лекарства
+     * @param heartRate - частота сердцебиения
+     * @param bloodPressure - давление
+     * @param medicationTime - время приема лекарства
+     * @param dyspnea - одышка
+     * @param sweating - потоотделение
+     * @param dizziness - головокружение
+     * @param stateOfHealth - описание состояния здоровья
+     */
     public StructuredNote(int heartRate, String bloodPressure, MedicationTime medicationTime, String dyspnea, String sweating, String dizziness, String stateOfHealth) {
         super(heartRate, bloodPressure, medicationTime);
         this.dyspnea = dyspnea;
@@ -70,19 +86,5 @@ public class StructuredNote extends Note{
                 ", dizziness='" + dizziness + '\'' +
                 ", stateOfHealth='" + stateOfHealth + '\'' +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        StructuredNote that = (StructuredNote) o;
-        return Objects.equals(dyspnea, that.dyspnea) && Objects.equals(sweating, that.sweating) && Objects.equals(dizziness, that.dizziness) && Objects.equals(stateOfHealth, that.stateOfHealth);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), dyspnea, sweating, dizziness, stateOfHealth);
     }
 }

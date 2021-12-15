@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.UUID;
 
+/**
+ * класс User
+ * используется для хранения заметок
+ * к конкретному лекарству
+ */
 public class User {
     UUID id;
     UUID medicineId;
@@ -12,8 +17,8 @@ public class User {
     public User() {
     }
 
-    public User(UUID id, UUID medicineId, ArrayList<UUID> noteIds) {
-        this.id = id;
+    public User(UUID medicineId, ArrayList<UUID> noteIds) {
+        this.id = UUID.randomUUID();
         this.medicineId = medicineId;
         this.noteIds = noteIds;
     }

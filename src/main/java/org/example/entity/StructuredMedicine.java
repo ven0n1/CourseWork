@@ -5,6 +5,12 @@ import org.example.Constants;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Objects;
+
+/**
+ * Класс StructuredMedicine
+ * используется для создания информации о лекарстве
+ * с структурированным описанием
+ */
 @XmlRootElement
 public class StructuredMedicine extends Medicine{
     @CsvBindByName(column = Constants.MEDICINE_USES)
@@ -18,6 +24,17 @@ public class StructuredMedicine extends Medicine{
     @CsvBindByName(column = Constants.MEDICINE_OVERDOSE)
     String overdose;
 
+    /**
+     * Конструктор для создания лекарства
+     * @param name - название лекарства
+     * @param form - лекарственная форма
+     * @param date - дата окончания срока годности
+     * @param uses - показания к применению
+     * @param sideEffects - побочные эффекты
+     * @param precautions - меры предосторожности
+     * @param interaction - взаимодействие с другими лекарственными препаратами
+     * @param overdose - передозировка
+     */
     public StructuredMedicine(String name, String form, String date, String uses, String sideEffects, String precautions, String interaction, String overdose) {
         super(name, form, date);
         this.uses = uses;
@@ -82,19 +99,5 @@ public class StructuredMedicine extends Medicine{
                 ", interaction='" + interaction + '\'' +
                 ", overdose='" + overdose + '\'' +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        StructuredMedicine that = (StructuredMedicine) o;
-        return Objects.equals(uses, that.uses) && Objects.equals(sideEffects, that.sideEffects) && Objects.equals(precautions, that.precautions) && Objects.equals(interaction, that.interaction) && Objects.equals(overdose, that.overdose);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), uses, sideEffects, precautions, interaction, overdose);
     }
 }

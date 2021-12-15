@@ -5,11 +5,24 @@ import org.example.Constants;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Objects;
+
+/**
+ * Класс CustomNote
+ * используется для создания заметок о приеме лекарства
+ * с описанием, который напишет пользователь
+ */
 @XmlRootElement
 public class CustomNote extends Note{
     @CsvBindByName(column = Constants.DESCRIPTION)
     String description;
 
+    /**
+     * Конструктор для создания заметки о приеме лекарства
+     * @param heartRate - частота сердцебиения
+     * @param bloodPressure - давление
+     * @param medicationTime - время приема лекарства
+     * @param description - дополнительная информация от пользователя
+     */
     public CustomNote(int heartRate, String bloodPressure, MedicationTime medicationTime, String description) {
         super(heartRate, bloodPressure, medicationTime);
         this.description = description;
@@ -34,19 +47,5 @@ public class CustomNote extends Note{
                 ", medicationTime=" + medicationTime +
                 ", description='" + description + '\'' +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        CustomNote that = (CustomNote) o;
-        return Objects.equals(description, that.description);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), description);
     }
 }

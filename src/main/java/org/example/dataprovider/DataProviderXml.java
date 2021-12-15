@@ -4,9 +4,9 @@ import com.google.gson.Gson;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.Constants;
-import org.example.HistoryContent;
+import org.example.entity.HistoryContent;
 import org.example.entity.*;
-import org.example.util.JAXBCollection;
+import org.example.entity.JAXBCollection;
 
 import javax.xml.bind.*;
 import javax.xml.namespace.QName;
@@ -16,6 +16,9 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
+
+import static org.example.util.XmlUtil.read;
+import static org.example.util.XmlUtil.save;
 
 public class DataProviderXml implements IDataProvider{
     private static final Logger logger = LogManager.getLogger(DataProviderCsv.class);
@@ -107,10 +110,10 @@ public class DataProviderXml implements IDataProvider{
     }
 
     @Override
-    public boolean addSections(Medicine medicine, String uses, String sideEffect, String precautions, String interaction, String overdose) {
+    public boolean addSections(Medicine medicine, String uses, String sideEffects, String precautions, String interaction, String overdose) {
         boolean isCreated;
         StructuredMedicine structuredMedicine = new StructuredMedicine(medicine.getName(), medicine.getForm(),
-                medicine.getDate(), uses, sideEffect, precautions, interaction, overdose);
+                medicine.getDate(), uses, sideEffects, precautions, interaction, overdose);
         List<StructuredMedicine> medicineList = new ArrayList<>();
         if(read(StructuredMedicine.class, Constants.XML_STRUCTURED_MEDICINE).isPresent()){
             medicineList = read(StructuredMedicine.class, Constants.XML_STRUCTURED_MEDICINE).get();
@@ -127,69 +130,4 @@ public class DataProviderXml implements IDataProvider{
         System.arraycopy(parameters, 0, strings, 0, parameters.length);
         return strings;
     }
-
-
-    public static <T> boolean save(String rootName, Collection<T> collection, String path) {
-        boolean isSaved = false;
-        try {
-            // Create context with generic type
-            JAXBContext jaxbContext = JAXBContext.newInstance(findTypes(collection));
-            Marshaller marshaller = jaxbContext.createMarshaller();
-            // Create wrapper collection
-            JAXBElement collectionElement = createCollectionElement(rootName, collection);
-            marshaller.marshal(collectionElement, new File(path));
-            isSaved = true;
-        } catch (JAXBException e) {
-            logger.error(e);
-        }
-        return isSaved;
-    }
-
-
-    public static <T> Optional<List<T>> read(Class<T> tClass, String path) {
-        Optional<List<T>> optional = Optional.empty();
-        File file = new File(path);
-        file.getParentFile().mkdirs();
-        try {
-            if(file.createNewFile()){
-                logger.info(Constants.INFO_CREATE_FILE);
-            }
-        } catch (IOException e) {
-            logger.error(e);
-        }
-        try {
-            JAXBContext jaxbContext = JAXBContext.newInstance(JAXBCollection.class, tClass);
-            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            JAXBCollection<T> collection = unmarshaller.unmarshal(new StreamSource(new File(path)), JAXBCollection.class).getValue();
-            optional = Optional.of(collection.getItems());
-        } catch (JAXBException e) {
-            logger.error(e);
-        }
-        return optional;
-    }
-
-    protected static <T> Class[] findTypes(Collection<T> collection) {
-        Set<Class> types = new HashSet<Class>();
-        types.add(JAXBCollection.class);
-        for (T object : collection) {
-            if (object != null) {
-                types.add(object.getClass());
-            }
-        }
-        return types.toArray(new Class[0]);
-    }
-
-    /**
-     * создает JAXBElement, который содержит JAXBCollection. Нужен для
-     * marshall для generic коллекции без отдельного класса-оболочки
-     *
-     * @param rootName Имя корневого элемента в Xml
-     * @param tCollection List для сохранения
-     * @return JAXBElement, содержащий нашу Collection, обернутую в JAXBCollection.
-     */
-    protected static <T> JAXBElement createCollectionElement(String rootName, Collection<T> tCollection) {
-        JAXBCollection collection = new JAXBCollection(tCollection);
-        return new JAXBElement<JAXBCollection>(new QName(rootName), JAXBCollection.class, collection);
-    }
-
 }
