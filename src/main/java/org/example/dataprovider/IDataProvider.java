@@ -12,7 +12,9 @@ import org.example.entity.HistoryContent;
 import org.example.entity.Medicine;
 import org.example.entity.Note;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -65,7 +67,18 @@ public interface IDataProvider {
      * @param date количество месяцев до истечения срока годности
      * @return Строку с датой приведенной к виду: yyyy/MM/dd
      */
-    String addDate(int date);
+    default String addDate(int date){
+        // загружаем нужный паттерн для даты
+        String pattern = Constants.MEDICINE_DATE_PATTERN;
+        DateFormat df = new SimpleDateFormat(pattern);
+        // инициализируем текущую дату
+        Calendar calendar = Calendar.getInstance();
+        // добавляем к текущей дате кол-во месяцев в переданном параметре
+        calendar.add(Calendar.MONTH, date);
+        // преобразуем Calendar в Date
+        Date expirationDate = calendar.getTime();
+        return df.format(expirationDate);
+    }
 
     /**
      * Указание дополнительного описания о лекарстве

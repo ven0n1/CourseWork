@@ -104,20 +104,6 @@ public class DataProviderCsv implements IDataProvider{
     }
 
     @Override
-    public String addDate(int date) {
-        // загружаем нужный паттерн для даты
-        String pattern = Constants.MEDICINE_DATE_PATTERN;
-        DateFormat df = new SimpleDateFormat(pattern);
-        // инициализируем текущую дату
-        Calendar calendar = Calendar.getInstance();
-        // добавляем к текущей дате кол-во месяцев в переданном параметре
-        calendar.add(Calendar.MONTH, date);
-        // преобразуем Calendar в Date
-        Date expirationDate = calendar.getTime();
-        return df.format(expirationDate);
-    }
-
-    @Override
     public boolean addDescription(Medicine medicine, String description) {
         boolean isCreated;
         // создаем конструктор со всеми известными данными

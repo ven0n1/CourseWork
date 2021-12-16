@@ -21,7 +21,7 @@ import java.util.Date;
  */
 public class AppTest {
     private static final Logger logger = LogManager.getLogger(AppTest.class);
-    IDataProvider dataProvider = new DataProviderXml();
+    IDataProvider dataProvider = new DataProviderCsv();
 
     @Test
     public void a(){
