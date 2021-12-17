@@ -107,14 +107,14 @@ public interface IDataProvider {
      * @param json json представление объекта
      * @return резултьтат сохранения
      */
-    static boolean saveHistory(String className, HistoryContent.Status status, String json){
+    static boolean saveHistory(String className, HistoryContent.Status status, Object json){
         try (MongoClient mongoClient = MongoClients.create(Constants.MONGO_CLIENT)) {
             MongoDatabase database = mongoClient.getDatabase(Constants.DATABASE_NAME);
             try{
                 database.createCollection(Constants.COLLECTION_NAME);
             } catch (MongoCommandException ignored) {}
             String date = new SimpleDateFormat(Constants.MONGO_DATE_PATTERN).format(new Date());
-            HistoryContent historyContent = new HistoryContent(className, date, status, json);
+            HistoryContent historyContent = new HistoryContent(className, date, status, new Gson().toJson(json));
             MongoCollection<Document> collection = database.getCollection(Constants.COLLECTION_NAME);
             collection.insertOne(Document.parse(new Gson().toJson(historyContent)));
         }

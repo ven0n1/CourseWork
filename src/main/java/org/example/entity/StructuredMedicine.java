@@ -44,6 +44,15 @@ public class StructuredMedicine extends Medicine{
         this.overdose = overdose;
     }
 
+    public StructuredMedicine(Medicine medicine, String uses, String sideEffects, String precautions, String interaction, String overdose){
+        super(medicine.getName(), medicine.getForm(), medicine.getDate());
+        this.uses = uses;
+        this.sideEffects = sideEffects;
+        this.precautions = precautions;
+        this.interaction = interaction;
+        this.overdose = overdose;
+    }
+
     public StructuredMedicine() {
     }
 

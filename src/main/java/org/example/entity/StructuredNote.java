@@ -40,6 +40,14 @@ public class StructuredNote extends Note{
         this.stateOfHealth = stateOfHealth;
     }
 
+    public StructuredNote(Note note, String dyspnea, String sweating, String dizziness, String stateOfHealth){
+        super(note.getHeartRate(), note.getBloodPressure(), note.getMedicationTime());
+        this.dyspnea = dyspnea;
+        this.sweating = sweating;
+        this.dizziness = dizziness;
+        this.stateOfHealth = stateOfHealth;
+    }
+
     public StructuredNote() {
     }
 

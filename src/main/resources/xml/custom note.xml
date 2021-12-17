@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Notes>
+    <customNote>
+        <bloodPressure>120/80</bloodPressure>
+        <heartRate>60</heartRate>
+        <id>7ac948b8-91f5-430c-ad47-8027f00c63d2</id>
+        <medicationTime>BEFORE</medicationTime>
+        <description>1</description>
+    </customNote>
+    <customNote>
+        <bloodPressure>120/80</bloodPressure>
+        <heartRate>60</heartRate>
+        <id>7e064053-1a62-4b04-ac32-8f1d9c7f4b77</id>
+        <medicationTime>BEFORE</medicationTime>
+        <description>1</description>
+    </customNote>
+</Notes>

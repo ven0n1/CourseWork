@@ -28,6 +28,11 @@ public class CustomMedicine extends Medicine{
         this.description = description;
     }
 
+    public CustomMedicine(Medicine medicine, String description){
+        super(medicine.getName(), medicine.getForm(), medicine.getDate());
+        this.description = description;
+    }
+
     public CustomMedicine() {
     }
 

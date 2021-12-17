@@ -1,36 +1,143 @@
 package org.example.dataprovider;
 
-import org.example.entity.Medicine;
-import org.example.entity.Note;
+import com.google.gson.Gson;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.example.Constants;
+import org.example.entity.*;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import static org.example.util.CsvUtil.read;
+import static org.example.util.CsvUtil.save;
+
 
 public class DataProviderDB implements IDataProvider{
+    private static final Logger logger = LogManager.getLogger(DataProviderDB.class);
+
+    public DataProviderDB() {
+    }
+
+
     @Override
-    public boolean createNote(int heartBlood, String bloodPressure, Note.MedicationTime medicationTime, boolean additionalDescription, String[] parameters) {
-        return false;
+    public boolean createNote(int heartBlood, String bloodPressure, Note.MedicationTime medicationTime,
+                              boolean additionalDescription, String[] parameters) {
+        Note note;
+        // создаем констуктор Note
+        note = new Note(heartBlood, bloodPressure, medicationTime);
+        boolean isCreated;
+        // заполняем аргументы, чтобы учесть возможность, когда пользователь задал меньшее количество аргументов
+        String[] arguments = fillArguments(parameters);
+        if (additionalDescription){
+            // вызываем метод с дополнительным параметром (description)
+            isCreated = specifyAdditionalParameters(note, arguments[0]);
+        } else {
+            // вызываем метод с дополнительными параметрами (dyspnea, sweating, dizziness, stateOfHealth)
+            isCreated = specifyStructuredParameters(note, arguments[0], arguments[1], arguments[2], arguments[3]);
+        }
+        return isCreated;
     }
 
     @Override
     public boolean specifyAdditionalParameters(Note note, String description) {
-        return false;
+        boolean isCreated;
+        CustomNote customNote = new CustomNote(note, description);
+        String query = String.format(Constants.INSERT_CUSTOM_NOTE, customNote.getId(), customNote.getHeartRate(),
+                customNote.getBloodPressure(), customNote.getMedicationTime(), customNote.getDescription());
+        isCreated = executeQuery(Constants.CREATE_TABLE_CUSTOM_NOTE, query);
+        // сохраняем историю в Mongo
+        IDataProvider.saveHistory(getClass().getName(), HistoryContent.Status.SUCCESS, customNote);
+        return isCreated;
     }
 
     @Override
     public boolean specifyStructuredParameters(Note note, String dyspnea, String sweating, String dizziness, String stateOfHealth) {
-        return false;
+        boolean isCreated;
+        StructuredNote structuredNote = new StructuredNote(note, dyspnea, sweating, dizziness, stateOfHealth);
+        String query = String.format(Constants.INSERT_STRUCTURED_NOTE, structuredNote.getId(), structuredNote.getHeartRate(),
+                structuredNote.getBloodPressure(), structuredNote.getMedicationTime(), structuredNote.getDyspnea(),
+                structuredNote.getSweating(), structuredNote.getDizziness(), structuredNote.getStateOfHealth());
+        isCreated = executeQuery(Constants.CREATE_TABLE_STRUCTURED_NOTE, query);
+        // сохраняем историю в Mongo
+        IDataProvider.saveHistory(getClass().getName(), HistoryContent.Status.SUCCESS, structuredNote);
+        return isCreated;
     }
 
     @Override
     public boolean addMedicine(String name, String form, int date, boolean sectionsOrDescription, String[] parameters) {
-        return false;
+        boolean isCreated;
+        // вызываем метод addDate для нормализации даты
+        String dateResult = addDate(date);
+        // создаем констуктор Medicine
+        Medicine medicine = new Medicine(name, form, dateResult);
+        // заполняем аргументы, чтобы учесть возможность, когда пользователь задал меньшее количество аргументов
+        String[] arguments = fillArguments(parameters);
+        if (sectionsOrDescription){
+            // вызываем метод с дополнительным параметром (description)
+            isCreated = addDescription(medicine, arguments[0]);
+        } else {
+            // вызываем метод с дополнительными параметрами (uses, sideEffects, precautions, interaction, overdose)
+            isCreated = addSections(medicine, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4]);
+        }
+        return isCreated;
     }
 
     @Override
     public boolean addDescription(Medicine medicine, String description) {
-        return false;
+        boolean isCreated;
+        CustomMedicine customMedicine = new CustomMedicine(medicine, description);
+        String query = String.format(Constants.INSERT_CUSTOM_MEDICINE, customMedicine.getId(), customMedicine.getName(),
+                customMedicine.getForm(), customMedicine.getDate(), customMedicine.getDescription());
+        isCreated = executeQuery(Constants.CREATE_TABLE_CUSTOM_MEDICINE, query);
+        // сохраняем историю в Mongo
+        IDataProvider.saveHistory(getClass().getName(), HistoryContent.Status.SUCCESS, customMedicine);
+        return isCreated;
     }
 
     @Override
     public boolean addSections(Medicine medicine, String uses, String sideEffects, String precautions, String interaction, String overdose) {
-        return false;
+        boolean isCreated;
+        StructuredMedicine structuredMedicine = new StructuredMedicine(medicine, uses, sideEffects, precautions,
+                interaction, overdose);
+        String query = String.format(Constants.INSERT_STRUCTURED_MEDICINE, structuredMedicine.getId(),
+                structuredMedicine.getName(), structuredMedicine.getForm(), structuredMedicine.getDate(),
+                structuredMedicine.getUses(), structuredMedicine.getSideEffects(), structuredMedicine.getPrecautions(),
+                structuredMedicine.getInteraction(), structuredMedicine.getOverdose());
+        isCreated = executeQuery(Constants.CREATE_TABLE_STRUCTURED_MEDICINE, query);
+        // сохраняем историю в Mongo
+        IDataProvider.saveHistory(getClass().getName(), HistoryContent.Status.SUCCESS, structuredMedicine);
+        return isCreated;
+    }
+
+    public String[] fillArguments(String[] parameters){
+        // создаем массив строк размером в 5 (макс. кол-во дополнительных параметров)
+        String[] strings = new String[5];
+        // заполняем их дефолтными строками
+        Arrays.fill(strings, Constants.DEFAULT);
+        // копируем данные из parameters в strings
+        System.arraycopy(parameters, 0, strings, 0, parameters.length);
+        return strings;
+    }
+
+    public boolean executeQuery(String table, String query){
+        boolean isCreated = false;
+        try {
+            Class.forName(Constants.JDBC_DRIVER);
+        } catch (ClassNotFoundException e) {
+            logger.error(e);
+        }
+        try (Connection connection = DriverManager.getConnection(Constants.URL + Constants.DATABASE_NAME,
+                Constants.USER, Constants.PASSWORD)){
+            Statement statement = connection.createStatement();
+            statement.execute(table);
+            statement.execute(query);
+            isCreated = true;
+        } catch (SQLException e) {
+            logger.error(e);
+        }
+        return isCreated;
     }
 }

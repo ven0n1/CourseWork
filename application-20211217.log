@@ -1,0 +1,92 @@
+2021-12-17 12:14:17.423 [main] INFO  org.example.util.CsvUtil - File is created
+2021-12-17 12:14:17.426 [main] INFO  org.example.util.CsvUtil - File empty
+2021-12-17 12:14:18.142 [main] INFO  org.example.AppTest - true
+2021-12-17 12:14:18.150 [main] INFO  org.example.util.CsvUtil - File is created
+2021-12-17 12:14:18.150 [main] INFO  org.example.util.CsvUtil - File empty
+2021-12-17 12:14:18.174 [main] INFO  org.example.AppTest - true
+2021-12-17 12:14:18.185 [main] INFO  org.example.util.CsvUtil - File is created
+2021-12-17 12:14:18.185 [main] INFO  org.example.util.CsvUtil - File empty
+2021-12-17 12:14:18.287 [main] INFO  org.example.AppTest - true
+2021-12-17 12:14:18.294 [main] INFO  org.example.util.CsvUtil - File is created
+2021-12-17 12:14:18.294 [main] INFO  org.example.util.CsvUtil - File empty
+2021-12-17 12:14:18.314 [main] INFO  org.example.AppTest - true
+2021-12-17 12:14:35.638 [main] INFO  org.example.util.XmlUtil - File is created
+2021-12-17 12:14:35.983 [main] ERROR org.example.util.XmlUtil - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./src/main/resources/xml/custom%20note.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-17 12:14:36.290 [main] INFO  org.example.AppTest - true
+2021-12-17 12:14:36.291 [main] INFO  org.example.util.XmlUtil - File is created
+2021-12-17 12:14:36.297 [main] ERROR org.example.util.XmlUtil - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./src/main/resources/xml/structured%20note.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-17 12:14:36.315 [main] INFO  org.example.AppTest - true
+2021-12-17 12:14:36.317 [main] INFO  org.example.util.XmlUtil - File is created
+2021-12-17 12:14:36.322 [main] ERROR org.example.util.XmlUtil - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./src/main/resources/xml/custom%20medicine.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-17 12:14:36.338 [main] INFO  org.example.AppTest - true
+2021-12-17 12:14:36.340 [main] INFO  org.example.util.XmlUtil - File is created
+2021-12-17 12:14:36.346 [main] ERROR org.example.util.XmlUtil - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./src/main/resources/xml/structured%20medicine.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-17 12:14:36.364 [main] INFO  org.example.AppTest - true
+2021-12-17 12:48:18.652 [main] INFO  org.example.AppTest - true
+2021-12-17 12:51:14.063 [main] INFO  org.example.AppTest - true
+2021-12-17 12:52:04.540 [main] ERROR org.example.dataprovider.DataProviderDB - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TEXToverdose TEXT)' at line 1
+2021-12-17 12:52:04.626 [main] ERROR org.example.dataprovider.DataProviderDB - java.sql.SQLSyntaxErrorException: Table 'yaminov.custom_note' doesn't exist
+2021-12-17 12:52:04.948 [main] INFO  org.example.AppTest - false
+2021-12-17 12:54:53.636 [main] INFO  org.example.AppTest - true
+2021-12-17 12:56:32.170 [main] INFO  org.example.AppTest - true
+2021-12-17 13:30:33.422 [main] INFO  org.example.AppTest - true
+2021-12-17 13:30:33.844 [main] INFO  org.example.AppTest - true
+2021-12-17 13:30:34.304 [main] INFO  org.example.AppTest - true
+2021-12-17 13:30:34.343 [main] ERROR org.example.dataprovider.DataProviderDB - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TEXToverdose TEXT)' at line 1
+2021-12-17 13:30:34.358 [main] INFO  org.example.AppTest - false
+2021-12-17 13:33:43.768 [main] INFO  org.example.AppTest - true
+2021-12-17 13:33:44.763 [main] INFO  org.example.AppTest - true
+2021-12-17 13:33:45.514 [main] INFO  org.example.AppTest - true
+2021-12-17 13:33:45.943 [main] INFO  org.example.AppTest - true
+2021-12-17 13:38:04.414 [main] INFO  org.example.AppTest - true
+2021-12-17 13:38:05.417 [main] INFO  org.example.AppTest - true
+2021-12-17 13:38:05.789 [main] INFO  org.example.AppTest - true
+2021-12-17 13:38:06.399 [main] INFO  org.example.AppTest - true
+2021-12-17 13:38:59.141 [main] INFO  org.example.util.CsvUtil - File is created
+2021-12-17 13:38:59.144 [main] INFO  org.example.util.CsvUtil - File empty
+2021-12-17 13:38:59.593 [main] INFO  org.example.AppTest - true
+2021-12-17 13:38:59.595 [main] INFO  org.example.util.CsvUtil - File is created
+2021-12-17 13:38:59.595 [main] INFO  org.example.util.CsvUtil - File empty
+2021-12-17 13:38:59.625 [main] INFO  org.example.AppTest - true
+2021-12-17 13:38:59.628 [main] INFO  org.example.util.CsvUtil - File is created
+2021-12-17 13:38:59.628 [main] INFO  org.example.util.CsvUtil - File empty
+2021-12-17 13:38:59.647 [main] INFO  org.example.AppTest - true
+2021-12-17 13:38:59.649 [main] INFO  org.example.util.CsvUtil - File is created
+2021-12-17 13:38:59.650 [main] INFO  org.example.util.CsvUtil - File empty
+2021-12-17 13:38:59.670 [main] INFO  org.example.AppTest - true
+2021-12-17 13:40:11.790 [main] INFO  org.example.util.XmlUtil - File is created
+2021-12-17 13:40:12.021 [main] ERROR org.example.util.XmlUtil - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./src/main/resources/xml/custom%20note.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-17 13:40:12.327 [main] INFO  org.example.AppTest - true
+2021-12-17 13:40:12.328 [main] INFO  org.example.util.XmlUtil - File is created
+2021-12-17 13:40:12.335 [main] ERROR org.example.util.XmlUtil - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./src/main/resources/xml/structured%20note.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-17 13:40:12.353 [main] INFO  org.example.AppTest - true
+2021-12-17 13:40:12.355 [main] INFO  org.example.util.XmlUtil - File is created
+2021-12-17 13:40:12.360 [main] ERROR org.example.util.XmlUtil - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./src/main/resources/xml/custom%20medicine.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-17 13:40:12.380 [main] INFO  org.example.AppTest - true
+2021-12-17 13:40:12.382 [main] INFO  org.example.util.XmlUtil - File is created
+2021-12-17 13:40:12.387 [main] ERROR org.example.util.XmlUtil - javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; systemId: file:/C:/Users/ven0n/IdeaProjects/CourseWork/./src/main/resources/xml/structured%20medicine.xml; lineNumber: 1; columnNumber: 1; Premature end of file.]
+2021-12-17 13:40:12.405 [main] INFO  org.example.AppTest - true
+2021-12-17 14:02:21.425 [main] INFO  org.example.AppTest - true
+2021-12-17 14:02:21.461 [main] INFO  org.example.AppTest - true
+2021-12-17 14:02:21.492 [main] INFO  org.example.AppTest - true
+2021-12-17 14:02:21.522 [main] INFO  org.example.AppTest - true
+2021-12-17 14:03:32.042 [main] INFO  org.example.AppTest - true
+2021-12-17 14:03:32.225 [main] INFO  org.example.AppTest - true
+2021-12-17 14:03:32.386 [main] INFO  org.example.AppTest - true
+2021-12-17 14:03:32.538 [main] INFO  org.example.AppTest - true

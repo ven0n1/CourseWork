@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Medicines>
+    <customMedicine>
+        <date>2023/06/17</date>
+        <form>form</form>
+        <id>195fbb3c-28c7-47c7-8fdc-01e2afab8f45</id>
+        <name>name</name>
+        <description>1</description>
+    </customMedicine>
+    <customMedicine>
+        <date>2023/06/17</date>
+        <form>form</form>
+        <id>eba5a4da-33aa-4d52-a98e-47ee6e2d829a</id>
+        <name>name</name>
+        <description>1</description>
+    </customMedicine>
+</Medicines>

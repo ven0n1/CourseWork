@@ -15,17 +15,18 @@ import java.util.UUID;
  */
 @XmlRootElement
 public class Note {
+    public enum MedicationTime {
+        BEFORE,
+        DURING,
+        AFTER
+    }
+
     @CsvBindByName(column = Constants.ID)
     UUID id;
     @CsvBindByName(column = Constants.NOTE_HEART_RATE)
     int heartRate;
     @CsvBindByName(column = Constants.NOTE_BLOOD_PRESSURE)
     String bloodPressure;
-    public enum MedicationTime {
-        BEFORE,
-        DURING,
-        AFTER
-    }
     @CsvBindByName(column = Constants.NOTE_MEDICATION_TIME)
     MedicationTime medicationTime;
 
@@ -37,6 +38,14 @@ public class Note {
     }
 
     public Note() {
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public int getHeartRate() {

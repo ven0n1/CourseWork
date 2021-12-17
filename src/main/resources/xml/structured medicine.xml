@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Medicines>
+    <structuredMedicine>
+        <date>2023/06/17</date>
+        <form>form</form>
+        <id>0f9179fe-7aaf-40a9-8e69-573458647a00</id>
+        <name>name</name>
+        <interaction>default</interaction>
+        <overdose>default</overdose>
+        <precautions>default</precautions>
+        <sideEffects>default</sideEffects>
+        <uses>1</uses>
+    </structuredMedicine>
+    <structuredMedicine>
+        <date>2023/06/17</date>
+        <form>form</form>
+        <id>de76e374-fe95-41f3-a4b8-5fb7baf99b27</id>
+        <name>name</name>
+        <interaction>default</interaction>
+        <overdose>default</overdose>
+        <precautions>default</precautions>
+        <sideEffects>default</sideEffects>
+        <uses>1</uses>
+    </structuredMedicine>
+</Medicines>

@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.dataprovider.DataProviderCsv;
+import org.example.dataprovider.DataProviderDB;
 import org.example.dataprovider.DataProviderXml;
 import org.example.dataprovider.IDataProvider;
 import org.example.entity.Note;
@@ -21,11 +22,12 @@ import java.util.Date;
  */
 public class AppTest {
     private static final Logger logger = LogManager.getLogger(AppTest.class);
-    IDataProvider dataProvider = new DataProviderCsv();
+    IDataProvider dataProvider = new DataProviderDB();
 
     @Test
     public void a(){
-        boolean ok = dataProvider.createNote(60, "120/80", Note.MedicationTime.BEFORE, true, new String[]{"1"});
+        boolean ok;
+        ok = dataProvider.createNote(60, "120/80", Note.MedicationTime.BEFORE, true, new String[]{"1"});
         logger.info(ok);
         ok = dataProvider.createNote(60, "120/80", Note.MedicationTime.BEFORE, false, new String[]{"1", "2", "3", "4", "5"});
         logger.info(ok);

@@ -4,23 +4,23 @@ public class Constants {
     public static final String PROPERTIES_PATH = "properties";
 
     // Csv файлы
-    public static final String CSV_CUSTOM_NOTE = "./csv/custom note.csv";
-    public static final String CSV_STRUCTURED_NOTE = "./csv/structured note.csv";
-    public static final String CSV_CUSTOM_MEDICINE = "./csv/custom medicine.csv";
-    public static final String CSV_STRUCTURED_MEDICINE = "./csv/structured medicine.csv";
+    public static final String CSV_CUSTOM_NOTE = "./src/main/resources/csv/custom note.csv";
+    public static final String CSV_STRUCTURED_NOTE = "./src/main/resources/csv/structured note.csv";
+    public static final String CSV_CUSTOM_MEDICINE = "./src/main/resources/csv/custom medicine.csv";
+    public static final String CSV_STRUCTURED_MEDICINE = "./src/main/resources/csv/structured medicine.csv";
 
     // Xml файлы
-    public static final String XML_CUSTOM_NOTE = "./xml/custom note.xml";
-    public static final String XML_STRUCTURED_NOTE = "./xml/structured note.xml";
-    public static final String XML_CUSTOM_MEDICINE = "./xml/custom medicine.xml";
-    public static final String XML_STRUCTURED_MEDICINE = "./xml/structured medicine.xml";
+    public static final String XML_CUSTOM_NOTE = "./src/main/resources/xml/custom note.xml";
+    public static final String XML_STRUCTURED_NOTE = "./src/main/resources/xml/structured note.xml";
+    public static final String XML_CUSTOM_MEDICINE = "./src/main/resources/xml/custom medicine.xml";
+    public static final String XML_STRUCTURED_MEDICINE = "./src/main/resources/xml/structured medicine.xml";
     public static final String XML_NOTES = "Notes";
     public static final String XML_MEDICINES = "Medicines";
 
     // сохранение истории в Mongo
     public static final String DEFAULT = "default";
     public static final String ACTOR = "System";
-    public static final String DATABASE_NAME = "Yaminov";
+    public static final String DATABASE_NAME = "yaminov";
     public static final String COLLECTION_NAME = "historyContent";
     public static final String MONGO_CLIENT = "mongodb://localhost:27017";
     public static final String MONGO_DATE_PATTERN = "yyyy.MM.dd HH:mm:ss";
@@ -48,21 +48,20 @@ public class Constants {
 
     // JDBC, адрес, имя пользователя и пароль для MySQL server
     public static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static final String URL = "jdbc:mysql://localhost:3306/";
-    public static final String DB_NAME = "q";
-    private static final String USER = "root";
-    private static final String PASSWORD = "qwerty";
+    public static final String URL = "jdbc:mysql://localhost:3306/";
+    public static final String USER = "root";
+    public static final String PASSWORD = "qwerty";
 
     // Запросы Sql
     public static final String CREATE_TABLE_CUSTOM_NOTE = "CREATE TABLE IF NOT EXISTS CUSTOM_NOTE(" +
             "id TEXT, " +
-            "heartRate int, " +
+            "heartRate INT, " +
             "bloodPressure TEXT, " +
             "medicationTime TEXT, " +
             "description TEXT);";
     public static final String CREATE_TABLE_STRUCTURED_NOTE = "CREATE TABLE IF NOT EXISTS STRUCTURED_NOTE(" +
             "id TEXT, " +
-            "heartRate int, " +
+            "heartRate INT, " +
             "bloodPressure TEXT, " +
             "medicationTime TEXT, " +
             "dyspnea TEXT, " +
@@ -83,12 +82,16 @@ public class Constants {
             "uses TEXT, " +
             "sideEffects TEXT, " +
             "precautions TEXT, " +
-            "interaction TEXT" +
+            "interaction TEXT, " +
             "overdose TEXT);";
-    public static final String INSERT_CUSTOM_NOTE = "INSERT INTO CUSTOM_NOTE VALUES ('%s', %d, '%s', '%s', '%s');";
-    public static final String INSERT_STRUCTURED_NOTE = "INSERT INTO STRUCTURED_NOTE VALUES ('%s', %d, '%s', '%s', '%s');";
-    public static final String INSERT_CUSTOM_MEDICINE = "INSERT INTO CUSTOM_MEDICINE VALUES ('%s', '%s', '%s', '%s', '%s');";
-    public static final String INSERT_STRUCTURED_MEDICINE = "INSERT INTO STRUCTURED_MEDICINE VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');";
+    public static final String INSERT_CUSTOM_NOTE = "INSERT INTO CUSTOM_NOTE VALUES " +
+            "('%s', %d, '%s', '%s', '%s');";
+    public static final String INSERT_STRUCTURED_NOTE = "INSERT INTO STRUCTURED_NOTE VALUES " +
+            "('%s', %d, '%s', '%s', '%s', '%s', '%s', '%s');";
+    public static final String INSERT_CUSTOM_MEDICINE = "INSERT INTO CUSTOM_MEDICINE VALUES " +
+            "('%s', '%s', '%s', '%s', '%s');";
+    public static final String INSERT_STRUCTURED_MEDICINE = "INSERT INTO STRUCTURED_MEDICINE VALUES " +
+            "('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');";
 
 
     // Исключения

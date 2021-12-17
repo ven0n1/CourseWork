@@ -28,6 +28,11 @@ public class CustomNote extends Note{
         this.description = description;
     }
 
+    public CustomNote(Note note, String description){
+        super(note.getHeartRate(), note.getBloodPressure(), note.getMedicationTime());
+        this.description = description;
+    }
+
     public CustomNote() {
     }
 

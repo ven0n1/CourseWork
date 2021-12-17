@@ -50,7 +50,7 @@ public class DataProviderXml implements IDataProvider{
     public boolean specifyAdditionalParameters(Note note, String description) {
         boolean isCreated;
         // создаем конструктор со всеми известными данными
-        CustomNote customNote = new CustomNote(note.getHeartRate(), note.getBloodPressure(), note.getMedicationTime(), description);
+        CustomNote customNote = new CustomNote(note, description);
         List<CustomNote> list = new ArrayList<>();
         // считываем данные из файла, если они есть
         if(read(CustomNote.class, Constants.XML_CUSTOM_NOTE).isPresent()){
@@ -60,7 +60,7 @@ public class DataProviderXml implements IDataProvider{
         // после добавления, сохраняем данные в файл
         isCreated = save(Constants.XML_NOTES, list, Constants.XML_CUSTOM_NOTE);
         // сохраняем историю в Mongo
-        IDataProvider.saveHistory(getClass().getName(), HistoryContent.Status.SUCCESS, new Gson().toJson(customNote));
+        IDataProvider.saveHistory(getClass().getName(), HistoryContent.Status.SUCCESS, customNote);
         return isCreated;
     }
 
@@ -68,8 +68,7 @@ public class DataProviderXml implements IDataProvider{
     public boolean specifyStructuredParameters(Note note, String dyspnea, String sweating, String dizziness, String stateOfHealth) {
         boolean isCreated;
         // создаем конструктор со всеми известными данными
-        StructuredNote structuredNote = new StructuredNote(note.getHeartRate(), note.getBloodPressure(),
-                note.getMedicationTime(), dyspnea, sweating, dizziness, stateOfHealth);
+        StructuredNote structuredNote = new StructuredNote(note, dyspnea, sweating, dizziness, stateOfHealth);
         List<StructuredNote> list = new ArrayList<>();
         // считываем данные из файла, если они есть
         if(read(StructuredNote.class, Constants.XML_STRUCTURED_NOTE).isPresent()){
@@ -79,7 +78,7 @@ public class DataProviderXml implements IDataProvider{
         // после добавления, сохраняем данные в файл
         isCreated = save(Constants.XML_NOTES, list, Constants.XML_STRUCTURED_NOTE);
         // сохраняем историю в Mongo
-        IDataProvider.saveHistory(getClass().getName(), HistoryContent.Status.SUCCESS, new Gson().toJson(structuredNote));
+        IDataProvider.saveHistory(getClass().getName(), HistoryContent.Status.SUCCESS, structuredNote);
         return isCreated;
     }
 
@@ -106,7 +105,7 @@ public class DataProviderXml implements IDataProvider{
     public boolean addDescription(Medicine medicine, String description) {
         boolean isCreated;
         // создаем конструктор со всеми известными данными
-        CustomMedicine customMedicine = new CustomMedicine(medicine.getName(), medicine.getForm(), medicine.getDate(), description);
+        CustomMedicine customMedicine = new CustomMedicine(medicine, description);
         List<CustomMedicine> list = new ArrayList<>();
         // считываем данные из файла, если они есть
         if(read(CustomMedicine.class, Constants.XML_CUSTOM_MEDICINE).isPresent()){
@@ -116,7 +115,7 @@ public class DataProviderXml implements IDataProvider{
         // после добавления, сохраняем данные в файл
         isCreated = save(Constants.XML_MEDICINES, list, Constants.XML_CUSTOM_MEDICINE);
         // сохраняем историю в Mongo
-        IDataProvider.saveHistory(getClass().getName(), HistoryContent.Status.SUCCESS, new Gson().toJson(customMedicine));
+        IDataProvider.saveHistory(getClass().getName(), HistoryContent.Status.SUCCESS, customMedicine);
         return isCreated;
     }
 
@@ -124,8 +123,7 @@ public class DataProviderXml implements IDataProvider{
     public boolean addSections(Medicine medicine, String uses, String sideEffects, String precautions, String interaction, String overdose) {
         boolean isCreated;
         // создаем конструктор со всеми известными данными
-        StructuredMedicine structuredMedicine = new StructuredMedicine(medicine.getName(), medicine.getForm(),
-                medicine.getDate(), uses, sideEffects, precautions, interaction, overdose);
+        StructuredMedicine structuredMedicine = new StructuredMedicine(medicine, uses, sideEffects, precautions, interaction, overdose);
         List<StructuredMedicine> medicineList = new ArrayList<>();
         // считываем данные из файла, если они есть
         if(read(StructuredMedicine.class, Constants.XML_STRUCTURED_MEDICINE).isPresent()){
@@ -135,7 +133,7 @@ public class DataProviderXml implements IDataProvider{
         // после добавления, сохраняем данные в файл
         isCreated = save(Constants.XML_MEDICINES, medicineList, Constants.XML_STRUCTURED_MEDICINE);
         // сохраняем историю в Mongo
-        IDataProvider.saveHistory(getClass().getName(), HistoryContent.Status.SUCCESS, new Gson().toJson(structuredMedicine));
+        IDataProvider.saveHistory(getClass().getName(), HistoryContent.Status.SUCCESS, structuredMedicine);
         return isCreated;
     }
 
