@@ -93,8 +93,26 @@ public class Constants {
     public static final String INSERT_STRUCTURED_MEDICINE = "INSERT INTO STRUCTURED_MEDICINE VALUES " +
             "('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');";
 
+    // Команды для CLI
+    public static final String DATA_PROVIDER_CSV = "csv";
+    public static final String DATA_PROVIDER_XML = "xml";
+    public static final String DATA_PROVIDER_DB = "db";
+    public static final String METHOD_CREATE_NOTE = "create_note";
+    public static final String METHOD_ADD_MEDICINE = "add_medicine";
+    public static final String PATTERN_BLOOD_PRESSURE = "\\d{2,3}\\/\\d{2,3}";
+    public static final String MEDICATION_TIME_BEFORE = "before";
+    public static final String MEDICATION_TIME_DURING = "during";
+    public static final String MEDICATION_TIME_AFTER = "after";
+    public static final String TRUE = "true";
+    public static final String FALSE = "false";
+
 
     // Исключения
     public static final String INFO_EMPTY_FILE = "File empty";
     public static final String INFO_CREATE_FILE = "File is created";
+    public static final String ERROR_DATA_PROVIDER_NAME = "could not find data provider with that name";
+    public static final String ERROR_METHOD_NOT_FOUND = "Could not find method with that name";
+    public static final String ERROR_NECESSARY_ARGUMENTS = "There are not enough necessary arguments";
+    public static final String ERROR_TYPE_MISMATCH = "You have provided an inappropriate data type";
+    public static final String ERROR_PATTERN_DONT_MATCH = "Pattern does not match";
 }

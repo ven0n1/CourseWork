@@ -14,4 +14,11 @@
         <medicationTime>BEFORE</medicationTime>
         <description>1</description>
     </customNote>
+    <customNote>
+        <bloodPressure>120/80</bloodPressure>
+        <heartRate>60</heartRate>
+        <id>5d9019cb-a3a6-48fd-94bb-58a8db8dac8d</id>
+        <medicationTime>AFTER</medicationTime>
+        <description>first</description>
+    </customNote>
 </Notes>

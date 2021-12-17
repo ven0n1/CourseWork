@@ -29,11 +29,11 @@ public class DataProviderCsv implements IDataProvider{
 
 
     @Override
-    public boolean createNote(int heartBlood, String bloodPressure, Note.MedicationTime medicationTime,
+    public boolean createNote(int heartRate, String bloodPressure, Note.MedicationTime medicationTime,
                               boolean additionalDescription, String[] parameters) {
         Note note;
         // создаем констуктор Note
-        note = new Note(heartBlood, bloodPressure, medicationTime);
+        note = new Note(heartRate, bloodPressure, medicationTime);
         boolean isCreated;
         // заполняем аргументы, чтобы учесть возможность, когда пользователь задал меньшее количество аргументов
         String[] arguments = fillArguments(parameters);

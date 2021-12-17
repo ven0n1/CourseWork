@@ -1,5 +1,6 @@
 package org.example;
 
+import static org.example.App.main;
 import static org.junit.Assert.assertTrue;
 
 import org.apache.logging.log4j.LogManager;
@@ -23,6 +24,11 @@ import java.util.Date;
 public class AppTest {
     private static final Logger logger = LogManager.getLogger(AppTest.class);
     IDataProvider dataProvider = new DataProviderDB();
+
+    @Test
+    public void test(){
+        main(new String[]{"db", "create_note", "60", "120/80", "after", "false", "first", "second", "third", "fourth", "fifth", "sixth", "asdasd", "sfdsdfsd"});
+    }
 
     @Test
     public void a(){

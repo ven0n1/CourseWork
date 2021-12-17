@@ -23,14 +23,14 @@ import java.util.Date;
 public interface IDataProvider {
     /**
      * Создание заметки о лекарстве
-     * @param heartBlood указание частоты сердцебиения
+     * @param heartRate указание частоты сердцебиения
      * @param bloodPressure указание давления
      * @param medicationTime указание времени приема лекарства
      * @param additionalDescription нужно ли дополнительное описание
      * @param parameters указание дополнительных параметров для создания заметки
      * @return резултьтат сохранения
      */
-    boolean createNote(int heartBlood, String bloodPressure, Note.MedicationTime medicationTime, boolean additionalDescription, String[] parameters);
+    boolean createNote(int heartRate, String bloodPressure, Note.MedicationTime medicationTime, boolean additionalDescription, String[] parameters);
 
     /**
      * Указание описания о заметке

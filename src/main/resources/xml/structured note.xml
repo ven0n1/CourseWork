@@ -20,4 +20,14 @@
         <stateOfHealth>4</stateOfHealth>
         <sweating>2</sweating>
     </structuredNote>
+    <structuredNote>
+        <bloodPressure>120/80</bloodPressure>
+        <heartRate>60</heartRate>
+        <id>d05476f5-a942-48b9-8d3f-2e139360cf70</id>
+        <medicationTime>AFTER</medicationTime>
+        <dizziness>third</dizziness>
+        <dyspnea>first</dyspnea>
+        <stateOfHealth>fourth</stateOfHealth>
+        <sweating>second</sweating>
+    </structuredNote>
 </Notes>

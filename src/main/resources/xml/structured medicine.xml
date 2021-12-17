@@ -22,4 +22,15 @@
         <sideEffects>default</sideEffects>
         <uses>1</uses>
     </structuredMedicine>
+    <structuredMedicine>
+        <date>2022/12/17</date>
+        <form>form</form>
+        <id>bdc687aa-71cc-40dc-bc21-2724c738d2cd</id>
+        <name>name</name>
+        <interaction>fourth</interaction>
+        <overdose>fifth</overdose>
+        <precautions>third</precautions>
+        <sideEffects>second</sideEffects>
+        <uses>first</uses>
+    </structuredMedicine>
 </Medicines>

@@ -90,3 +90,34 @@
 2021-12-17 14:03:32.225 [main] INFO  org.example.AppTest - true
 2021-12-17 14:03:32.386 [main] INFO  org.example.AppTest - true
 2021-12-17 14:03:32.538 [main] INFO  org.example.AppTest - true
+2021-12-17 16:30:02.985 [main] ERROR org.example.App - There are not enough necessary arguments
+2021-12-17 16:31:40.186 [main] ERROR org.example.App - There are not enough necessary arguments
+2021-12-17 16:32:02.362 [main] ERROR org.example.App - Could not find method with that name
+2021-12-17 16:32:13.968 [main] ERROR org.example.App - java.io.IOException
+2021-12-17 16:32:13.972 [main] ERROR org.example.App - There are not enough necessary arguments
+2021-12-17 16:32:54.868 [main] ERROR org.example.App - There are not enough necessary arguments
+2021-12-17 16:34:05.630 [main] ERROR org.example.App - could not find data provider with that name
+2021-12-17 16:34:05.635 [main] ERROR org.example.App - There are not enough necessary arguments
+2021-12-17 16:36:13.514 [main] ERROR org.example.App - There are not enough necessary arguments
+2021-12-17 16:36:23.559 [main] ERROR org.example.App - There are not enough necessary arguments
+2021-12-17 16:36:32.642 [main] ERROR org.example.App - There are not enough necessary arguments
+2021-12-17 16:36:41.266 [main] ERROR org.example.App - There are not enough necessary arguments
+2021-12-17 16:36:49.954 [main] ERROR org.example.App - There are not enough necessary arguments
+2021-12-17 16:37:07.586 [main] ERROR org.example.App - java.lang.NumberFormatException: For input string: "a"
+2021-12-17 16:37:28.843 [main] ERROR org.example.App - Pattern does not match
+2021-12-17 16:37:39.951 [main] ERROR org.example.App - Pattern does not match
+2021-12-17 16:37:49.747 [main] ERROR org.example.App - Pattern does not match
+2021-12-17 16:37:57.530 [main] ERROR org.example.App - Pattern does not match
+2021-12-17 16:38:09.516 [main] ERROR org.example.App - Pattern does not match
+2021-12-17 16:38:48.029 [main] ERROR org.example.App - You have provided an inappropriate data type
+2021-12-17 16:39:00.213 [main] ERROR org.example.App - Pattern does not match
+2021-12-17 16:39:40.946 [main] ERROR org.example.App - Pattern does not match
+2021-12-17 16:39:51.236 [main] ERROR org.example.App - You have provided an inappropriate data type
+2021-12-17 16:40:10.656 [main] ERROR org.example.App - You have provided an inappropriate data type
+2021-12-17 17:24:30.050 [main] ERROR org.example.App - There are not enough necessary arguments
+2021-12-17 17:52:59.047 [main] ERROR org.example.App - java.lang.NumberFormatException: For input string: "after"
+2021-12-17 17:53:23.880 [main] ERROR org.example.App - There are not enough necessary arguments
+2021-12-17 17:53:34.641 [main] ERROR org.example.App - There are not enough necessary arguments
+2021-12-17 17:53:46.240 [main] ERROR org.example.App - There are not enough necessary arguments
+2021-12-17 17:54:12.664 [main] ERROR org.example.App - There are not enough necessary arguments
+2021-12-17 17:58:40.602 [main] ERROR org.example.App - java.lang.NumberFormatException: For input string: "name"

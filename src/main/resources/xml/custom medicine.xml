@@ -14,4 +14,11 @@
         <name>name</name>
         <description>1</description>
     </customMedicine>
+    <customMedicine>
+        <date>2022/12/17</date>
+        <form>form</form>
+        <id>75745d0b-f94b-47b1-95be-3dde00447afd</id>
+        <name>name</name>
+        <description>first</description>
+    </customMedicine>
 </Medicines>
