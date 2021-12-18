@@ -8,16 +8,17 @@ import org.example.dataprovider.DataProviderXml;
 import org.example.dataprovider.IDataProvider;
 import org.example.entity.Note;
 
-import java.io.IOException;
 import java.util.Optional;
 
-/**
- * Hello world!
- *
- */
+
 public class App {
     private static final Logger logger = LogManager.getLogger(App.class);
     static String[] additionalArgs;
+
+    /**
+     * Основная функция для вызова методов
+     * @param args передаваемые в методы параметры
+     */
     public static void main( String[] args ) {
         // Если запуск произошел без аргументов, то завершается работа
         if (args.length == 0){
@@ -137,6 +138,11 @@ public class App {
         }
     }
 
+    /**
+     * Выбор дата провайдера и учет возможности неправильного написания
+     * @param argDataProvider название дата провайдера
+     * @return выбранный дата провайдер либо Optional.empty()
+     */
     private static Optional<IDataProvider> chooseDataProvider(String argDataProvider){
         Optional<IDataProvider> optional = Optional.empty();
         IDataProvider dataProvider;
@@ -160,6 +166,12 @@ public class App {
         return optional;
     }
 
+    /**
+     * заполнение дополнительных параметров для extend методов
+     * в зависимости от кол-ва переданных аргументов
+     * @param args принимаемые от main аргументы
+     * @return массив строк с выбранными параметрами
+     */
     private static String[] fillUnnecessaryParameters(String[] args){
         String[] additionalArgs = new String[]{};
         if (args.length == 7) {

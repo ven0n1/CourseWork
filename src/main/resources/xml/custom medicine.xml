@@ -21,4 +21,18 @@
         <name>name</name>
         <description>first</description>
     </customMedicine>
+    <customMedicine>
+        <date>2022/12/15</date>
+        <form>pills</form>
+        <id>052203ed-3660-42cc-866d-f32bc1718af6</id>
+        <name>Aspirin</name>
+        <description>Разовая доза - от 250 мг до 1 г, суточная - от 250 мг до 3 г; кратность применения - 2-6 раз/сут.</description>
+    </customMedicine>
+    <customMedicine>
+        <date>2022/12/18</date>
+        <form>pills</form>
+        <id>37680203-fa2b-4680-ac9a-64e9def71954</id>
+        <name>Aspirin</name>
+        <description>Разовая доза - от 250 мг до 1 г, суточная - от 250 мг до 3 г; кратность применения - 2-6 раз/сут.</description>
+    </customMedicine>
 </Medicines>

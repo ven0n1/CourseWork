@@ -21,4 +21,18 @@
         <medicationTime>AFTER</medicationTime>
         <description>first</description>
     </customNote>
+    <customNote>
+        <bloodPressure>120/80</bloodPressure>
+        <heartRate>60</heartRate>
+        <id>8fd2981c-2710-41ed-80c5-96cd2cb444b8</id>
+        <medicationTime>DURING</medicationTime>
+        <description>OK</description>
+    </customNote>
+    <customNote>
+        <bloodPressure>120/80</bloodPressure>
+        <heartRate>60</heartRate>
+        <id>233e8183-fe53-4b62-9ebe-830701256794</id>
+        <medicationTime>DURING</medicationTime>
+        <description>OK</description>
+    </customNote>
 </Notes>

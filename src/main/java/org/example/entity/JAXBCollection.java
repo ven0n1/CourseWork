@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class JAXBCollection<T> {
     @XmlAnyElement(lax = true)
-    private List<T> items;
+    private final List<T> items;
 
     public JAXBCollection(Collection<T> contents) {
         if (contents instanceof List) {

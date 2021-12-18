@@ -9,7 +9,8 @@ public class HistoryContent {
     String className;
     String createdDate;
     String actor = Constants.ACTOR;
-    public enum Status {SUCCESS, FAULT};
+    public enum Status {SUCCESS, FAULT}
+
     Status status;
     String jsonEntity;
 

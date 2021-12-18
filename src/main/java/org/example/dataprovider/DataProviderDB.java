@@ -1,18 +1,15 @@
 package org.example.dataprovider;
 
-import com.google.gson.Gson;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.Constants;
 import org.example.entity.*;
 
-import java.sql.*;
-import java.util.ArrayList;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Arrays;
-import java.util.List;
-
-import static org.example.util.CsvUtil.read;
-import static org.example.util.CsvUtil.save;
 
 
 public class DataProviderDB implements IDataProvider{
@@ -29,6 +26,11 @@ public class DataProviderDB implements IDataProvider{
         // создаем констуктор Note
         note = new Note(heartRate, bloodPressure, medicationTime);
         boolean isCreated;
+        // проверка, что parameters не равны null
+        if (parameters == null){
+            logger.error(Constants.ERROR_PARAMETERS_NULL);
+            return false;
+        }
         // заполняем аргументы, чтобы учесть возможность, когда пользователь задал меньшее количество аргументов
         String[] arguments = fillArguments(parameters);
         if (additionalDescription){
@@ -44,6 +46,11 @@ public class DataProviderDB implements IDataProvider{
     @Override
     public boolean specifyAdditionalParameters(Note note, String description) {
         boolean isCreated;
+        // Проверка, что передан не null объект
+        if (note == null){
+            logger.error(Constants.ERROR_OBJECT_NULL);
+            return false;
+        }
         CustomNote customNote = new CustomNote(note, description);
         String query = String.format(Constants.INSERT_CUSTOM_NOTE, customNote.getId(), customNote.getHeartRate(),
                 customNote.getBloodPressure(), customNote.getMedicationTime(), customNote.getDescription());
@@ -56,6 +63,11 @@ public class DataProviderDB implements IDataProvider{
     @Override
     public boolean specifyStructuredParameters(Note note, String dyspnea, String sweating, String dizziness, String stateOfHealth) {
         boolean isCreated;
+        // Проверка, что передан не null объект
+        if (note == null){
+            logger.error(Constants.ERROR_OBJECT_NULL);
+            return false;
+        }
         StructuredNote structuredNote = new StructuredNote(note, dyspnea, sweating, dizziness, stateOfHealth);
         String query = String.format(Constants.INSERT_STRUCTURED_NOTE, structuredNote.getId(), structuredNote.getHeartRate(),
                 structuredNote.getBloodPressure(), structuredNote.getMedicationTime(), structuredNote.getDyspnea(),
@@ -73,6 +85,11 @@ public class DataProviderDB implements IDataProvider{
         String dateResult = addDate(date);
         // создаем констуктор Medicine
         Medicine medicine = new Medicine(name, form, dateResult);
+        // проверка, что parameters не равны null
+        if (parameters == null){
+            logger.error(Constants.ERROR_PARAMETERS_NULL);
+            return false;
+        }
         // заполняем аргументы, чтобы учесть возможность, когда пользователь задал меньшее количество аргументов
         String[] arguments = fillArguments(parameters);
         if (sectionsOrDescription){
@@ -88,6 +105,11 @@ public class DataProviderDB implements IDataProvider{
     @Override
     public boolean addDescription(Medicine medicine, String description) {
         boolean isCreated;
+        // Проверка, что передан не null объект
+        if (medicine == null){
+            logger.error(Constants.ERROR_OBJECT_NULL);
+            return false;
+        }
         CustomMedicine customMedicine = new CustomMedicine(medicine, description);
         String query = String.format(Constants.INSERT_CUSTOM_MEDICINE, customMedicine.getId(), customMedicine.getName(),
                 customMedicine.getForm(), customMedicine.getDate(), customMedicine.getDescription());
@@ -100,6 +122,11 @@ public class DataProviderDB implements IDataProvider{
     @Override
     public boolean addSections(Medicine medicine, String uses, String sideEffects, String precautions, String interaction, String overdose) {
         boolean isCreated;
+        // Проверка, что передан не null объект
+        if (medicine == null){
+            logger.error(Constants.ERROR_OBJECT_NULL);
+            return false;
+        }
         StructuredMedicine structuredMedicine = new StructuredMedicine(medicine, uses, sideEffects, precautions,
                 interaction, overdose);
         String query = String.format(Constants.INSERT_STRUCTURED_MEDICINE, structuredMedicine.getId(),

@@ -1,21 +1,13 @@
 package org.example.dataprovider;
 
-import com.google.gson.Gson;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.Constants;
-import org.example.entity.HistoryContent;
 import org.example.entity.*;
-import org.example.entity.JAXBCollection;
 
-import javax.xml.bind.*;
-import javax.xml.namespace.QName;
-import javax.xml.transform.stream.StreamSource;
-import java.io.File;
-import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.example.util.XmlUtil.read;
 import static org.example.util.XmlUtil.save;
@@ -34,6 +26,11 @@ public class DataProviderXml implements IDataProvider{
         // создаем констуктор Note
         note = new Note(heartRate, bloodPressure, medicationTime);
         boolean isCreated;
+        // проверка, что parameters не равны null
+        if (parameters == null){
+            logger.error(Constants.ERROR_PARAMETERS_NULL);
+            return false;
+        }
         // заполняем аргументы, чтобы учесть возможность, когда пользователь задал меньшее количество аргументов
         String[] arguments = fillArguments(parameters);
         if (additionalDescription){
@@ -49,6 +46,11 @@ public class DataProviderXml implements IDataProvider{
     @Override
     public boolean specifyAdditionalParameters(Note note, String description) {
         boolean isCreated;
+        // Проверка, что передан не null объект
+        if (note == null){
+            logger.error(Constants.ERROR_OBJECT_NULL);
+            return false;
+        }
         // создаем конструктор со всеми известными данными
         CustomNote customNote = new CustomNote(note, description);
         List<CustomNote> list = new ArrayList<>();
@@ -67,6 +69,11 @@ public class DataProviderXml implements IDataProvider{
     @Override
     public boolean specifyStructuredParameters(Note note, String dyspnea, String sweating, String dizziness, String stateOfHealth) {
         boolean isCreated;
+        // Проверка, что передан не null объект
+        if (note == null){
+            logger.error(Constants.ERROR_OBJECT_NULL);
+            return false;
+        }
         // создаем конструктор со всеми известными данными
         StructuredNote structuredNote = new StructuredNote(note, dyspnea, sweating, dizziness, stateOfHealth);
         List<StructuredNote> list = new ArrayList<>();
@@ -89,6 +96,11 @@ public class DataProviderXml implements IDataProvider{
         String dateResult = addDate(date);
         // создаем констуктор Medicine
         Medicine medicine = new Medicine(name, form, dateResult);
+        // проверка, что parameters не равны null
+        if (parameters == null){
+            logger.error(Constants.ERROR_PARAMETERS_NULL);
+            return false;
+        }
         // заполняем аргументы, чтобы учесть возможность, когда пользователь задал меньшее количество аргументов
         String[] arguments = fillArguments(parameters);
         if (sectionsOrDescription){
@@ -104,6 +116,11 @@ public class DataProviderXml implements IDataProvider{
     @Override
     public boolean addDescription(Medicine medicine, String description) {
         boolean isCreated;
+        // Проверка, что передан не null объект
+        if (medicine == null){
+            logger.error(Constants.ERROR_OBJECT_NULL);
+            return false;
+        }
         // создаем конструктор со всеми известными данными
         CustomMedicine customMedicine = new CustomMedicine(medicine, description);
         List<CustomMedicine> list = new ArrayList<>();
@@ -122,6 +139,11 @@ public class DataProviderXml implements IDataProvider{
     @Override
     public boolean addSections(Medicine medicine, String uses, String sideEffects, String precautions, String interaction, String overdose) {
         boolean isCreated;
+        // Проверка, что передан не null объект
+        if (medicine == null){
+            logger.error(Constants.ERROR_OBJECT_NULL);
+            return false;
+        }
         // создаем конструктор со всеми известными данными
         StructuredMedicine structuredMedicine = new StructuredMedicine(medicine, uses, sideEffects, precautions, interaction, overdose);
         List<StructuredMedicine> medicineList = new ArrayList<>();

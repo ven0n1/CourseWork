@@ -110,6 +110,8 @@ public class Constants {
     // Исключения
     public static final String INFO_EMPTY_FILE = "File empty";
     public static final String INFO_CREATE_FILE = "File is created";
+    public static final String ERROR_PARAMETERS_NULL = "parameters can not be null";
+    public static final String ERROR_OBJECT_NULL = "object can not be null";
     public static final String ERROR_DATA_PROVIDER_NAME = "could not find data provider with that name";
     public static final String ERROR_METHOD_NOT_FOUND = "Could not find method with that name";
     public static final String ERROR_NECESSARY_ARGUMENTS = "There are not enough necessary arguments";
