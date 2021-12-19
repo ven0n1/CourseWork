@@ -68,7 +68,8 @@ public class XmlUtil {
             JAXBContext jaxbContext = JAXBContext.newInstance(JAXBCollection.class, tClass);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
             // считываем в JAXBCollection
-            JAXBCollection<T> collection = unmarshaller.unmarshal(new StreamSource(new File(path)), JAXBCollection.class).getValue();
+            JAXBCollection<T> collection = unmarshaller.unmarshal(new StreamSource(new File(path)),
+                    JAXBCollection.class).getValue();
             // переводим JAXBCollection в List и оборачиваем в Optional
             optional = Optional.of(collection.getItems());
         } catch (JAXBException e) {

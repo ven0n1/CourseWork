@@ -31,7 +31,8 @@ public class StructuredNote extends Note{
      * @param dizziness - головокружение
      * @param stateOfHealth - описание состояния здоровья
      */
-    public StructuredNote(int heartRate, String bloodPressure, MedicationTime medicationTime, String dyspnea, String sweating, String dizziness, String stateOfHealth) {
+    public StructuredNote(int heartRate, String bloodPressure, MedicationTime medicationTime,
+                          String dyspnea, String sweating, String dizziness, String stateOfHealth) {
         super(heartRate, bloodPressure, medicationTime);
         this.dyspnea = dyspnea;
         this.sweating = sweating;

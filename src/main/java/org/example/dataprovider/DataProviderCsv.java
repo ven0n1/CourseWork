@@ -67,7 +67,8 @@ public class DataProviderCsv implements IDataProvider{
     }
 
     @Override
-    public boolean specifyStructuredParameters(Note note, String dyspnea, String sweating, String dizziness, String stateOfHealth) {
+    public boolean specifyStructuredParameters(Note note, String dyspnea, String sweating,
+                                               String dizziness, String stateOfHealth) {
         boolean isCreated;
         // Проверка, что передан не null объект
         if (note == null){
@@ -137,7 +138,8 @@ public class DataProviderCsv implements IDataProvider{
     }
 
     @Override
-    public boolean addSections(Medicine medicine, String uses, String sideEffects, String precautions, String interaction, String overdose) {
+    public boolean addSections(Medicine medicine, String uses, String sideEffects,
+                               String precautions, String interaction, String overdose) {
         boolean isCreated;
         // Проверка, что передан не null объект
         if (medicine == null){
@@ -145,7 +147,8 @@ public class DataProviderCsv implements IDataProvider{
             return false;
         }
         // создаем конструктор со всеми известными данными
-        StructuredMedicine structuredMedicine = new StructuredMedicine(medicine, uses, sideEffects, precautions, interaction, overdose);
+        StructuredMedicine structuredMedicine = new StructuredMedicine(medicine, uses, sideEffects,
+                precautions, interaction, overdose);
         List<Object> medicineList = new ArrayList<>();
         // считываем данные из файла, если они есть
         if(read(StructuredMedicine.class, Constants.CSV_STRUCTURED_MEDICINE).isPresent()){

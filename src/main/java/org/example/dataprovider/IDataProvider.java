@@ -28,15 +28,16 @@ public interface IDataProvider {
      * @param medicationTime указание времени приема лекарства
      * @param additionalDescription нужно ли дополнительное описание
      * @param parameters указание дополнительных параметров для создания заметки
-     * @return резултьтат сохранения
+     * @return результат сохранения
      */
-    boolean createNote(int heartRate, String bloodPressure, Note.MedicationTime medicationTime, boolean additionalDescription, String[] parameters);
+    boolean createNote(int heartRate, String bloodPressure, Note.MedicationTime medicationTime,
+                       boolean additionalDescription, String[] parameters);
 
     /**
      * Указание описания о заметке
      * @param note заметка, переданная из createNote
      * @param description дополнительное описание
-     * @return резултьтат сохранения
+     * @return результат сохранения
      */
     boolean specifyAdditionalParameters(Note note, String description);
 
@@ -47,9 +48,10 @@ public interface IDataProvider {
      * @param sweating потоотделение
      * @param dizziness головокружение
      * @param stateOfHealth состояние здоровья
-     * @return резултьтат сохранения
+     * @return результат сохранения
      */
-    boolean specifyStructuredParameters(Note note, String dyspnea, String sweating, String dizziness, String stateOfHealth);
+    boolean specifyStructuredParameters(Note note, String dyspnea, String sweating,
+                                        String dizziness, String stateOfHealth);
 
     /**
      * Создание лекарства
@@ -58,7 +60,7 @@ public interface IDataProvider {
      * @param date дата окончания срока годности лекарства
      * @param sectionsOrDescription указание структурированной информации или описания
      * @param parameters дополнительное описание
-     * @return резултьтат сохранения
+     * @return результат сохранения
      */
     boolean addMedicine(String name, String form, int date, boolean sectionsOrDescription, String[] parameters);
 
@@ -84,7 +86,7 @@ public interface IDataProvider {
      * Указание дополнительного описания о лекарстве
      * @param medicine лекарство, переданное из метода addMedicine
      * @param description дополнительное описание
-     * @return резултьтат сохранения
+     * @return результат сохранения
      */
     boolean addDescription(Medicine medicine, String description);
 
@@ -96,16 +98,17 @@ public interface IDataProvider {
      * @param precautions - меры предосторожности
      * @param interaction - взаимодействие с другими лекарственными препаратами
      * @param overdose - передозировка
-     * @return резултьтат сохранения
+     * @return результат сохранения
      */
-    boolean addSections(Medicine medicine, String uses, String sideEffects, String precautions, String interaction, String overdose);
+    boolean addSections(Medicine medicine, String uses, String sideEffects,
+                        String precautions, String interaction, String overdose);
 
     /**
      * Сохранение истории об операциях с entity объектом в Mongo
      * @param className имя класса, откуда был вызван метод для изменения объекта
      * @param status статус изменения (SUCCESS, FAULT)
      * @param json json представление объекта
-     * @return резултьтат сохранения
+     * @return результат сохранения
      */
     static boolean saveHistory(String className, HistoryContent.Status status, Object json){
         try (MongoClient mongoClient = MongoClients.create(Constants.MONGO_CLIENT)) {

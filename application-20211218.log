@@ -25,3 +25,5 @@
 2021-12-18 12:53:27.363 [main] ERROR org.example.dataprovider.DataProviderCsv - object can not be null
 2021-12-18 12:53:27.364 [main] ERROR org.example.dataprovider.DataProviderCsv - object can not be null
 2021-12-18 12:53:27.396 [main] ERROR org.example.dataprovider.DataProviderCsv - parameters can not be null
+2021-12-18 13:32:42.766 [main] ERROR org.example.App - There are not enough necessary arguments
+2021-12-18 13:32:56.307 [main] ERROR org.example.App - There are not enough necessary arguments

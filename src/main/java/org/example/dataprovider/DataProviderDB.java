@@ -61,7 +61,8 @@ public class DataProviderDB implements IDataProvider{
     }
 
     @Override
-    public boolean specifyStructuredParameters(Note note, String dyspnea, String sweating, String dizziness, String stateOfHealth) {
+    public boolean specifyStructuredParameters(Note note, String dyspnea, String sweating,
+                                               String dizziness, String stateOfHealth) {
         boolean isCreated;
         // Проверка, что передан не null объект
         if (note == null){
@@ -120,7 +121,8 @@ public class DataProviderDB implements IDataProvider{
     }
 
     @Override
-    public boolean addSections(Medicine medicine, String uses, String sideEffects, String precautions, String interaction, String overdose) {
+    public boolean addSections(Medicine medicine, String uses, String sideEffects,
+                               String precautions, String interaction, String overdose) {
         boolean isCreated;
         // Проверка, что передан не null объект
         if (medicine == null){
@@ -151,15 +153,19 @@ public class DataProviderDB implements IDataProvider{
 
     public boolean executeQuery(String table, String query){
         boolean isCreated = false;
+        // загрузка нужного класса
         try {
             Class.forName(Constants.JDBC_DRIVER);
         } catch (ClassNotFoundException e) {
             logger.error(e);
         }
+        // установка соединения
         try (Connection connection = DriverManager.getConnection(Constants.URL + Constants.DATABASE_NAME,
                 Constants.USER, Constants.PASSWORD)){
             Statement statement = connection.createStatement();
+            // создание таблицы, если она не существует
             statement.execute(table);
+            // выполнение запроса
             statement.execute(query);
             isCreated = true;
         } catch (SQLException e) {

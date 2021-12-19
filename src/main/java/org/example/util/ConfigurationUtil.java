@@ -16,7 +16,7 @@ import java.util.Properties;
  */
 public class ConfigurationUtil {
 
-    private static final String DEFAULT_CONFIG_PATH = "./src/main/resources/enviroment.properties";
+    private static final String DEFAULT_CONFIG_PATH = "./src/main/resources/environment.properties";
     private static final Properties configuration = new Properties();
     /**
      * Hides default constructor

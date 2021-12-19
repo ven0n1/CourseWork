@@ -8,29 +8,31 @@ import org.example.entity.Medicine;
 import org.example.entity.Note;
 import org.junit.Test;
 
-import static org.example.App.main;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
- * Unit test for simple App.
+ * Проверка всех методов, используя негативные и позитивные сценарии
  */
 public class AppTest {
     private static final Logger logger = LogManager.getLogger(AppTest.class);
     IDataProvider dataProvider = new DataProviderCsv();
 
+    // позитивный сценарий для метода CreateNote
     @Test
     public void positiveCreateNote(){
         boolean check = dataProvider.createNote(60, "120/80", Note.MedicationTime.DURING, true, new String[]{"OK"});
         assertTrue(check);
     }
 
+    // негативный сценарий для метода CreateNote
     @Test
     public void negativeCreateNote(){
         boolean check = dataProvider.createNote(60, null, null, true, null);
         assertFalse(check);
     }
 
+    // позитивный сценарий для метода SpecifyAdditionalParameters
     @Test
     public void positiveSpecifyAdditionalParameters(){
         Note note = new Note(60, "120/80", Note.MedicationTime.DURING);
@@ -38,12 +40,14 @@ public class AppTest {
         assertTrue(check);
     }
 
+    // негативный сценарий для метода SpecifyAdditionalParameters
     @Test
     public void negativeSpecifyAdditionalParameters(){
         boolean check = dataProvider.specifyAdditionalParameters(null, null);
         assertFalse(check);
     }
 
+    // позитивный сценарий для метода SpecifyStructuredParameters
     @Test
     public void positiveSpecifyStructuredParameters(){
         Note note = new Note(60, "120/80", Note.MedicationTime.DURING);
@@ -51,24 +55,28 @@ public class AppTest {
         assertTrue(check);
     }
 
+    // негативный сценарий для метода SpecifyStructuredParameters
     @Test
     public void negativeSpecifyStructuredParameters(){
         boolean check = dataProvider.specifyStructuredParameters(null, null, null, null, null);
         assertFalse(check);
     }
 
+    // позитивный сценарий для метода AddMedicine
     @Test
     public void positiveAddMedicine(){
         boolean check = dataProvider.addMedicine("Aspirin", "pills", 12, true, new String[]{"Разовая доза - от 250 мг до 1 г, суточная - от 250 мг до 3 г; кратность применения - 2-6 раз/сут."});
         assertTrue(check);
     }
 
+    // негативный сценарий для метода AddMedicine
     @Test
     public void negativeAddMedicine(){
         boolean check = dataProvider.addMedicine(null, null, 12, true, null);
         assertFalse(check);
     }
 
+    // позитивный сценарий для метода AddDescription
     @Test
     public void positiveAddDescription(){
         Medicine medicine = new Medicine("Aspirin", "pills", "2022/12/15");
@@ -76,12 +84,14 @@ public class AppTest {
         assertTrue(check);
     }
 
+    // негативный сценарий для метода AddDescription
     @Test
     public void negativeAddDescription(){
         boolean check = dataProvider.addDescription(null, null);
         assertFalse(check);
     }
 
+    // позитивный сценарий для метода AddSection
     @Test
     public void positiveAddSection(){
         Medicine medicine = new Medicine("Aspirin", "pills", "2022/12/15");
@@ -89,27 +99,10 @@ public class AppTest {
         assertTrue(check);
     }
 
+    // негативный сценарий для метода AddSection
     @Test
     public void negativeAddSection(){
         boolean check = dataProvider.addSections(null, null, null, null, null, null);
         assertFalse(check);
-    }
-
-//    @Test
-    public void aa(){
-        main(new String[]{"db", "create_note", "60", "120/80", "after", "false", "first", "second", "third", "fourth", "fifth", "sixth", "asdasd", "sfdsdfsd"});
-    }
-
-//    @Test
-    public void a(){
-        boolean ok;
-        ok = dataProvider.createNote(60, "120/80", Note.MedicationTime.BEFORE, true, new String[]{"1"});
-        logger.info(ok);
-        ok = dataProvider.createNote(60, "120/80", Note.MedicationTime.BEFORE, false, new String[]{"1", "2", "3", "4", "5"});
-        logger.info(ok);
-        ok = dataProvider.addMedicine("name", "form", 18, true, new String[]{"1"});
-        logger.info(ok);
-        ok = dataProvider.addMedicine("name", "form", 18, false, new String[]{"1"});
-        logger.info(ok);
     }
 }

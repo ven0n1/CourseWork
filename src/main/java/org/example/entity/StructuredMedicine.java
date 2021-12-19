@@ -34,7 +34,8 @@ public class StructuredMedicine extends Medicine{
      * @param interaction - взаимодействие с другими лекарственными препаратами
      * @param overdose - передозировка
      */
-    public StructuredMedicine(String name, String form, String date, String uses, String sideEffects, String precautions, String interaction, String overdose) {
+    public StructuredMedicine(String name, String form, String date, String uses, String sideEffects,
+                              String precautions, String interaction, String overdose) {
         super(name, form, date);
         this.uses = uses;
         this.sideEffects = sideEffects;
@@ -43,7 +44,8 @@ public class StructuredMedicine extends Medicine{
         this.overdose = overdose;
     }
 
-    public StructuredMedicine(Medicine medicine, String uses, String sideEffects, String precautions, String interaction, String overdose){
+    public StructuredMedicine(Medicine medicine, String uses, String sideEffects,
+                              String precautions, String interaction, String overdose){
         super(medicine.getName(), medicine.getForm(), medicine.getDate());
         this.uses = uses;
         this.sideEffects = sideEffects;

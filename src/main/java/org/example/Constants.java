@@ -45,7 +45,6 @@ public class Constants {
     public static final String MEDICINE_OVERDOSE = "overdose";
     public static final String MEDICINE_DATE_PATTERN = "yyyy/MM/dd";
 
-
     // JDBC, адрес, имя пользователя и пароль для MySQL server
     public static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
     public static final String URL = "jdbc:mysql://localhost:3306/";
@@ -105,7 +104,6 @@ public class Constants {
     public static final String MEDICATION_TIME_AFTER = "after";
     public static final String TRUE = "true";
     public static final String FALSE = "false";
-
 
     // Исключения
     public static final String INFO_EMPTY_FILE = "File empty";

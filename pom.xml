@@ -106,7 +106,9 @@
           <configuration>
             <archive>
               <manifest>
-                <mainClass>App.java</mainClass>
+                <addClasspath>true</addClasspath>
+                <classpathPrefix>lib/</classpathPrefix>
+                <mainClass>org.example.App</mainClass>
               </manifest>
             </archive>
           </configuration>
