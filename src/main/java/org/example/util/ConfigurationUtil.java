@@ -16,7 +16,6 @@ import java.util.Properties;
  */
 public class ConfigurationUtil {
 
-    private static final String DEFAULT_CONFIG_PATH = "./src/main/resources/environment.properties";
     private static final Properties configuration = new Properties();
     /**
      * Hides default constructor
@@ -40,7 +39,7 @@ public class ConfigurationUtil {
         if (System.getProperty(Constants.PROPERTIES_PATH) != null) {
             nf = new File(System.getProperty(Constants.PROPERTIES_PATH));
         } else {
-            nf = new File(DEFAULT_CONFIG_PATH);
+            nf = new File(Constants.DEFAULT_CONFIG_PATH);
         }
         try (InputStream in = new FileInputStream(nf)) {
             configuration.load(in);

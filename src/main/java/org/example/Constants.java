@@ -1,7 +1,16 @@
 package org.example;
 
 public class Constants {
+    // для properties
     public static final String PROPERTIES_PATH = "properties";
+    public static final String DEFAULT_CONFIG_PATH = "./src/main/resources/environment.properties";
+    public static final String LOG4J = "log4j";
+    public static final String CLIENT = "mongoClient";
+    public static final String DB_NAME = "databaseName";
+    public static final String COLLECTION = "collectionName";
+    public static final String JDBC_ADDRESS = "jdbcAddress";
+    public static final String JDBC_USER = "user";
+    public static final String JDBC_PASSWORD = "password";
 
     // Csv файлы
     public static final String CSV_CUSTOM_NOTE = "./src/main/resources/csv/custom note.csv";

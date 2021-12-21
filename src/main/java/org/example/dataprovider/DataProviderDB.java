@@ -4,7 +4,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.Constants;
 import org.example.entity.*;
+import org.example.util.ConfigurationUtil;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -159,16 +161,19 @@ public class DataProviderDB implements IDataProvider{
         } catch (ClassNotFoundException e) {
             logger.error(e);
         }
+        String address;
+        String user;
+        String password;
         // установка соединения
-        try (Connection connection = DriverManager.getConnection(Constants.URL + Constants.DATABASE_NAME,
-                Constants.USER, Constants.PASSWORD)){
+        try (Connection connection = DriverManager.getConnection(ConfigurationUtil.getConfigurationEntry(Constants.JDBC_ADDRESS),
+                ConfigurationUtil.getConfigurationEntry(Constants.JDBC_USER), ConfigurationUtil.getConfigurationEntry(Constants.JDBC_PASSWORD))){
             Statement statement = connection.createStatement();
             // создание таблицы, если она не существует
             statement.execute(table);
             // выполнение запроса
             statement.execute(query);
             isCreated = true;
-        } catch (SQLException e) {
+        } catch (SQLException | IOException e) {
             logger.error(e);
         }
         return isCreated;

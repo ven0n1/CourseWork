@@ -6,12 +6,16 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.bson.Document;
 import org.example.Constants;
 import org.example.entity.HistoryContent;
 import org.example.entity.Medicine;
 import org.example.entity.Note;
+import org.example.util.ConfigurationUtil;
 
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -21,6 +25,7 @@ import java.util.Date;
  * Интерфейс дата-провайдера с основным функционалом
  */
 public interface IDataProvider {
+    Logger logger = LogManager.getLogger(IDataProvider.class);
     /**
      * Создание заметки о лекарстве
      * @param heartRate указание частоты сердцебиения
@@ -111,14 +116,25 @@ public interface IDataProvider {
      * @return результат сохранения
      */
     static boolean saveHistory(String className, HistoryContent.Status status, Object json){
-        try (MongoClient mongoClient = MongoClients.create(Constants.MONGO_CLIENT)) {
-            MongoDatabase database = mongoClient.getDatabase(Constants.DATABASE_NAME);
+        String client;
+        String databaseName;
+        String collectionName;
+        try {
+            client = ConfigurationUtil.getConfigurationEntry(Constants.CLIENT);
+            databaseName = ConfigurationUtil.getConfigurationEntry(Constants.DB_NAME);
+            collectionName = ConfigurationUtil.getConfigurationEntry(Constants.COLLECTION);
+        } catch (IOException e) {
+            logger.error(e);
+            return false;
+        }
+        try (MongoClient mongoClient = MongoClients.create(client)) {
+            MongoDatabase database = mongoClient.getDatabase(databaseName);
             try{
-                database.createCollection(Constants.COLLECTION_NAME);
+                database.createCollection(collectionName);
             } catch (MongoCommandException ignored) {}
             String date = new SimpleDateFormat(Constants.MONGO_DATE_PATTERN).format(new Date());
             HistoryContent historyContent = new HistoryContent(className, date, status, new Gson().toJson(json));
-            MongoCollection<Document> collection = database.getCollection(Constants.COLLECTION_NAME);
+            MongoCollection<Document> collection = database.getCollection(collectionName);
             collection.insertOne(Document.parse(new Gson().toJson(historyContent)));
         }
         return true;
